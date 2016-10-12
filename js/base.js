@@ -10,7 +10,7 @@ Editor.prototype.bindEvents_ = function() {
                 document.execCommand('bold')
                 break
             case 'italic':
-                document.execCommand('italic')
+                document.execCommand('italic');
                 break
             case 'underline':
                 document.execCommand('underline');
