@@ -1,5 +1,8 @@
 function Editor(selector) {
+    console.log(selector)
     this.$editer = $(selector)
+    console.log(this.$editer.html())
+
     this.bindEvents_()
 }
 
