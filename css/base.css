@@ -1,0 +1,7 @@
+.positionDemo{
+    position: absolute;
+    display: inline;
+    float: right;
+    margin: 20px;
+    width: 200px;
+}
