@@ -1,7 +1,43 @@
+body{
+    border: 1px solid rebeccapurple;
+}
 .positionDemo{
     position: absolute;
     display: inline;
     float: right;
     margin: 20px;
     width: 200px;
+}
+#sibling-box{
+    border: 1px dotted #333;
+    margin-bottom: 10px;
+    height: 10px;
+}
+#bfc-box{
+    border: 1px solid #333;
+    overflow: hidden;
+}
+#float-box{
+    float: left;
+    margin-top: 20px;
+}
+.spanfloat{
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rebeccapurple;
+}
+.divfloat{
+    border: 1px solid red;
+    width:  200px;
+    padding: 10px;
+}
+
+section p:nth-child(2){
+    text-decoration: underline;
+}
+section p:nth-of-type(2){
+    font-size: 1.2em;
 }
