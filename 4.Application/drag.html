@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+            [draggalbe]{
+                user-select: none;
+                cursor: move;
+            }
+            .box{
+                height: 150px;
+                width: 150px;
+                border: 2px solid red;
+                float: left;
+                background-color: #ccc;
+                margin-right: 5px;
+                border-radius: 10px;
+                text-align: center;
+            }
+            .box header{
+                color: #fff;
+                text-shadow: #000 0 1px;
+                box-shadow: 5px;
+                padding: 5px;
+                background: #999;
+                border-bottom: 1px solid #ddd;
+                border-top-left-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script src="../modernizr.js" ></script>
+        <script src="../js/base.js"></script>
+    </head>
+    <body>
+        <div class="box" draggable="true">
+            <header>
+                A
+            </header>
+        </div>
+        <div class="box" draggable="true">
+            <header>
+                B
+            </header>
+        </div>
+        <div class="box" draggable="true">
+            <header>
+                C
+            </header>
+        </div>
+    </body>
+</html>

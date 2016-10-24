@@ -1,0 +1,17 @@
+<html>
+    <head>
+         <script src="../jquery.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+              var space = getRemainingSpacePercent()
+              alert(space)
+          })
+          function getRemainingSpacePercent(){
+              if(localStorage.remainingSpace){
+                  return localStorage.remainingSPace / 5000000 * 100
+              }
+          }
+          
+        </script>
+    </head>
+</html>

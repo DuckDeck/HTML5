@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <style>
+        body{
+            -webkit-perspective: 100px;
+        }
+        .div1{
+            display: -webkit-flex;
+            width: 50%;
+            margin-top: 100px;
+            margin-left: 100px;
+            font-size: 40pt;
+            background: yellow;
+            -webkit-transform: rotate(-20deg);
+            transform: skewX(20deg) scale(1.8) translateX(150px);
+            -webkit-transform-origin: top left;
+        }
+        .div2{
+            border: 1px solid rebeccapurple;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            -webkit-transform: rotate3d(1,2.0,3.0,10deg);
+        }
+         .div3{
+            border: 1px solid rebeccapurple;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            -webkit-transform: translate3d(10px,-20px,-10px)
+        }
+        .div4{
+            width: 200px;
+            height: 200px;
+            perspective: 250px;
+            transform-style: preserve-3d;
+            perspective-origin: -100% -50%;
+            margin-left: 100px;
+        }
+        .div4 > div{
+            display: block;
+            position: absolute;
+            width: 100px;
+            width: 100px;
+            line-height: 100px;
+            font-size: 60px;
+            color: white;
+            text-align: center;
+        }
+        .middle{
+            border: 1px dashed black;
+            background: transparent;
+        }
+        .front{
+            border: none;
+            background: rgba(0, 255, 0, 1);
+            -webkit-transform: translateZ(-50px);
+        }
+        .back{
+            background: rgba(0, 255, 0, 1);
+            -webkit-transform:translateZ(-50px);
+        }
+        .right{
+            background: rgba(196, 0, 0, 0.7);
+            -webkit-transform: rotateY(90deg) translateZ(50px);
+        }
+        .left{
+            background: rgba(196, 196, 0, 0.7);
+            -webkit-transform: rotateY(-90deg) translateZ(50px);
+        }
+        .top{
+            background: rgba(196, 196, 0, 0.7);
+            -webkit-transform: rotateX(90deg) translateZ(50px);
+        }
+        .bottom{
+            background: rgba(196, 0, 106, 0.7);
+            -webkit-transform: rotateX(-90deg) translateZ(50px);
+        }
+        </style>
+    </head>
+    <body>
+        <div class="div1" >
+            this is a superstar and we need a optimus to defeat it
+        </div>
+       
+      
+        <div class="div2">
+            
+        </div>
+
+        <div class="div3">
+            
+        </div>
+
+         <div class="div4">
+            <div class="middle">
+            </div>
+            <div class="front">1
+            </div>
+            <div class="back">2
+            </div>
+            <div class="right">3
+            </div>
+            <div class="left">4
+            </div>
+            <div class="top">  5
+            </div>
+            <div class="bottom">  6
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+        <link href="../css/style.css" rel="stylesheet">
+        <script src="../hammer.js" ></script>
+        <script src="../jquery.js" ></script>
+        <script src="touch.js">
+            
+        </script>
+        <style>
+            body{
+                overflow: hidden;
+            }
+           .swipe{
+               position: absolute;
+               left: 10px;
+               top: 10px;
+               background-color: gray;
+               width: 200px;
+               height: 200px;
+               display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="touch-box" class="swipe" >
+            swipeLeft
+        </div>
+
+        <div id="pinchzoom">
+            <img id="img" src="../img/1.jpg" ondragstart="return false" >
+        </div>
+    </body>
+</html>

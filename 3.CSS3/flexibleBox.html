@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+        .div1{
+            display: -webkit-flex;
+            width: 50%;
+            /*-webkit-flex-flow: column-reverse;*/
+            justify-content: space-between;
+        }
+        a{
+            text-align: center;
+            -webkit-box-flex: 1;
+            width: 100px;
+            background-color: grey;
+        } 
+        a:hover{
+            width: 120px;
+            height: 30px;
+            background-color: green;
+        }
+        .div2{
+            width: 50%;
+        }
+        .A,.C{
+            width: 100px;
+            -webkit-box-flex: 1
+        }
+        .B{
+            width: 33%;
+            -webkit-box-flex: 2
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="div1" >
+        <a  href="/home">Home</a>
+        <a  href="/home">About</a>
+        <a  href="/home">NAVIGATE</a>
+        </div>
+       
+         <div class="div2" >
+        <a class="A" href="/home">Home</a>
+        <!--<a class="B"  href="/home">About</a>
+        <a class="C" href="/home">NAVIGATE</a>-->
+        </div>
+
+
+    </body>
+</html>

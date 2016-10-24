@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <style>
+        .div1{
+          background: linear-gradient(to bottom, black, white);
+          width: 300px;
+          height: 300px;
+        }
+         .div2{
+            position: absolute;
+            top: 0px;
+            left: 350px;
+            width: 300px;
+            height: 300px;   
+            background: linear-gradient(45deg, red,white);     
+        }
+         .div3{
+            position: absolute;
+            top: 0px;
+            left: 700px;
+            width: 300px;
+            height: 300px;   
+            background: linear-gradient(-45deg, red,white);     
+
+        }
+        .div4{
+            position: absolute;
+            top: 350px;
+            left: 10px;
+            width: 300px;
+            height: 300px;   
+            background: linear-gradient(green, red,white);     
+
+        }
+        .div5{
+            position: absolute;
+            top: 350px;
+            left: 350px;
+            width: 300px;
+            height: 300px;   
+            background: linear-gradient(to top, red 20%,white 40%, yellow 20%);     
+
+        }
+        .div6{
+            position: absolute;
+            top: 350px;
+            left: 700px;
+            width: 300px;
+            height: 300px;   
+            background: radial-gradient(circle,black,white)    
+
+        }
+         .div7{
+            position: absolute;
+            top: 700px;
+            left: 10px;
+            width: 300px;
+            height: 300px;   
+            /*background: radial-gradient(circle,black,white 20%);*/
+           /* background: radial-gradient(top,circle,black,white) */
+           /*目前好像还不支持在里面加是top bottom: */
+           /*需要加上-webkit才行。不然后加上top bottom: 出现属性不支持这种情况*/
+           background: -webkit-radial-gradient(top,circle,white,black);
+        }
+         .div8{
+            position: absolute;
+            top: 700px;
+            left: 350px;
+            width: 300px;
+            height: 300px;   
+           background: -webkit-radial-gradient(bottom,circle,black,white, gray 20% ,black 40% ,white 60%);
+        }
+         .div9{
+            position: absolute;
+            top: 700px;
+            left: 700px;
+            width: 300px;
+            height: 200px;   
+           background: -webkit-radial-gradient(ellipse,red,yellow 10%, #1e90ef 50%,white);
+        }
+
+           .div10{
+            position: absolute;
+            top: 1050px;
+            left: 10px;
+            width: 300px;
+            height: 300px;   
+           background: -webkit-radial-gradient(circle farthest-corner,red,yellow 10%, #1e90ef 50%,white);
+        }
+
+          .div11{
+            position: absolute;
+            top: 1050px;
+            left: 350px;
+            width: 300px;
+            height: 300px;   
+           background: -webkit-radial-gradient(circle closest-side,red,yellow 10%, #1e90ef 50%,white);
+        }
+
+        .div12{
+            position: absolute;
+            top: 1050px;
+            left: 700px;
+            width: 300px;
+            height: 300px;   
+           background: -webkit-repeating-linear-gradient(-45deg,black,black 5px,white 5px,white 10px)
+        }
+        .div13{
+            position: absolute;
+            top: 1450px;
+            left: 10px;
+            width: 300px;
+            height: 300px;   
+           background: -webkit-repeating-radial-gradient(circle,black,black 5px,white 5px,white 10px)
+        }
+         .div14{
+            position: absolute;
+            top: 1450px;
+            left: 350px;
+            width: 700px;
+            height: 700px;   
+           background: -webkit-repeating-linear-gradient(90deg,transparent,transparent 50px,rgba(255, 127, 0, 0.25) 50px,rgba(255, 127, 0, 0.25) 56px,transparent 56px, transparent 63px,
+           rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 127, 0, 0.25) 116px,rgba(255, 127, 0, 0.25) 116px
+           ),
+           -webkit-repeating-linear-gradient(0deg,transparent,transparent 50px,rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25)63px,
+           rgba(255, 127, 0, 0.25)69px, transparent 69px,transparent 116px, rgba(255, 127, 0, 0.25) 116px , rgba(255, 127, 0, 0.25) 166px
+           ),
+           -webkit-repeating-linear-gradient(-45deg, transparent,transparent 5px,rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px),
+           -webkit-repeating-linear-gradient(45deg, transparent,transparent 5px,rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px)
+        }
+        </style>
+    </head>
+    <body>
+        <div class="div1" >
+            
+        </div>
+        <div class="div2"   >
+            
+        </div>
+         <div class="div3"   >
+            
+        </div>
+        <div class="div4">
+            
+        </div>
+           <div class="div5">
+            
+        </div>
+           <div class="div6">
+            
+        </div>
+           <div class="div7">
+            
+        </div>
+           <div class="div8">
+            
+        </div>
+           <div class="div9">
+            
+        </div>
+
+          </div>
+           <div class="div10">
+            
+        </div>
+           <div class="div11">
+            
+        </div>
+           <div class="div12">
+            
+        </div>
+         
+           <div class="div13">
+            
+        </div>
+           <div class="div14">
+            
+        </div>
+    </body>
+</html>
