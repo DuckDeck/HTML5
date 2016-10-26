@@ -3,7 +3,7 @@ $(document).ready(function(){
     Hammer(el).on('swipeleft',function(e){
         alert("tou swipe to left success")
     })
-
+TouchEmulator();
 
 var hammertime = Hammer(document.getElementById('pinchzoom'),{
     transform_always_block:true,
@@ -21,6 +21,7 @@ rotation = 1,
 last_rocation
 
 hammertime.on('touch drag transform',function(e){
+    alert(e)
     switch(e.type){
         case 'touch':
         last_scale = scale
@@ -34,7 +35,7 @@ hammertime.on('touch drag transform',function(e){
         break
         case 'transform':
         rotation = last_rocation + e.gesture.rotation
-        scale = Math.min(last_scale * gesture.scale,10)
+        scale = Math.min(last_scale * e.gesture.scale,10)
         break
     }
 var transform = "translate3d("+posX +"px,"+posY+"px,0)"+
