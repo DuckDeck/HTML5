@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<script src="http://cdn.jsdelivr.net/vue/2.0.5/vue.js"></script>
+		<script src="http://7xnv74.com1.z0.glb.clouddn.com/static/lib/flexible/flexible.js"></script>
+	    <script src="http://7xnv74.com1.z0.glb.clouddn.com/static/lib/fastclick/fastclick.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="container" id="app">
+			<div class="radio-wrapper">
+				<ul class="list clearfix" v-cloak>
+					<li v-for="anchor in anchorInfo">
+						<a class="link">
+							<div class="live" v-show="getLivingSatus(anchor)">
+								<p>观看直播</p>
+							</div>
+							<img :src="getUserImg(anchor.userID)" class="user" />
+							<img src="img/play.png" class="play" />
+							<p class="add">+1</p>
+						</a>
+						<div class="user-wrapper">
+							<div class="name" v-text="anchor.anchorName">
+							</div>
+							<div class="num" v-text="anchor.supportCnt">
+							</div>
+						</div>
+						<template v-if="getVoteStatus(anchor)">
+							<div class="had-btn">
+								<p>今日已支持</p>
+							</div>
+						</template>
+						<template v-else>
+							<div class="do-btn">
+								<p>支持</p>
+							</div>
+						</template>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<script type="text/javascript">
+		var lib = {
+	urlParams: function(url) {
+		var urlParamsList = {};
+		var params = url.search.replace(/^\?/, "").split('&'); //分开成各个不同的对像，去掉'&'
+		for(var i = 0; i < params.length; i++) {
+			var param = params[i];
+			var temp = param.split("=");
+			urlParamsList[temp[0]] = decodeURI(temp[1]);
+		}
+		return urlParamsList;
+	}
+};
+window.onload = function() {
+		var attachFastClick = Origami.fastclick;
+		attachFastClick(document.body);
+
+		var windowLocation = window.location,
+			selfUserID = lib.urlParams(windowLocation)['userID'],
+			selfSessionID = lib.urlParams(windowLocation)['sessionID'],
+			selfSessionToken = lib.urlParams(windowLocation)['sessionToken'],
+			selfPeerID = lib.urlParams(windowLocation)['peerID'];
+
+		var app = new Vue({
+			el: "#app",
+			data: {
+				anchorInfo: [],
+				getAnchorInfoUrl: "http://a.impingo.me/activity/getAnchorInfo",
+				livingInfo:[],
+				getLiveStatusUrl:"http://a.impingo.me/activity/getLiveStatus",
+				queryVoteStatusUrl:'http://a.impingo.me/activity/queryVoteStatus',
+				anchorUserID:'',
+				todayHaveVotes:false,
+			},
+			mounted: function() {
+				this.getAnchorInfo();
+				this.getLiveStatus();
+				this.queryVoteSatus();
+			},
+			methods: {
+				getAnchorInfo: function() {
+					this.$http.jsonp(this.getAnchorInfoUrl).then(function(res) {
+						var rtnData = res.data;
+						if(rtnData.rtn == 0) {
+							this.$set(this, 'anchorInfo', rtnData.data)
+						}
+					}).catch(function(res) {
+						console.info(res);
+						
+					})
+				},
+				
+				getLiveStatus:function(){
+					this.$http.jsonp(this.getLiveStatusUrl).then(function(res) {
+						var that = this;
+						var rtnData = res.data;
+					
+						if(rtnData.rtn == 0) {
+							this.$set(that, 'livingInfo', rtnData.data)
+						}
+					}).catch(function(res) {
+						console.info(res);
+					})
+
+				},
+				getLivingSatus:function(anchor){
+					this.livingInfo.forEach(function(living){
+						if(living.createUserID === anchor.userID){
+							if(living.state == "1"){
+								return true
+							}
+						}
+					})
+					return false
+				},
+				
+				queryVoteSatus:function(){
+					this.$http.jsonp(this.queryVoteStatusUrl + '?userId='+selfUserID).then(function(res){
+						var rtnData = res.data;
+						if(rtnData.rtn == 0){
+							this.todayHadVote = false;
+						}
+						else if(rtnData.rtn == 1){
+							thos.todayHadVote = true;
+							this.anchorUserID = rtnData.data.anchorUserID;
+						}
+					})
+					.catch(function(res){
+						console.info(res)
+					})
+				},
+				getUserImg: function(val) {
+					return 'http://a.impingo.me/static/activity/singer/resource/' + val + '.jpg';
+				},
+				getVoteStatus(anchor){
+					if(anchor.userID == this.anchorUserID){
+						return true
+					}
+					else{
+						return false
+					}
+				}
+			}
+		})
+
+	}
+	// Vue2。0 不支持把过滤器放在bind里面
+	</script>
+	</body>
+
+</html>
