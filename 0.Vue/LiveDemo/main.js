@@ -33,7 +33,8 @@ window.onload = function() {
 				// get info every some time
 				setIntervalGetAnchorInfo:null,
 				setIntervalGetLiveStatus:null,
-				intervalDuration:60 * 1000.
+				intervalDuration:60 * 1000,
+				singerVoteUrl: "http://a.impingo.me/activity/singerVote",
 			},
 			mounted: function() {
 				this.getAnchorInfo();
@@ -109,7 +110,8 @@ window.onload = function() {
 					setIntervalGetAnchorInfo = setInterval(function(){
 						that.getAnchorInfo();},that.intervalDuration
 					);
-					setIntervalGetLiveStatus = setInverval(function(){
+					
+					setIntervalGetLiveStatus = setInterval(function(){
 						that.getLiveStatus();
 					},that.intervalDuration);
 				},
