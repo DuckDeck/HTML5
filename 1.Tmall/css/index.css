@@ -1,0 +1,140 @@
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+}
+a{
+ color: #999;   
+}
+a:hover{
+    text-decoration: none;
+    color: #c40000;
+    cursor: pointer;
+}
+nav.topnav{
+    background: #f2f2f2;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+nav.topnav span,nav.topnav a{
+    margin: 0px 10px 0px 10px;
+}
+nav.topnav span{
+    color: #999;
+}
+.logo{
+    position: absolute;
+    left: 8rem;
+    top: 6rem;
+    width: 22rem;
+    height: 12rem;
+    z-index: -1;
+}
+.searchDiv{
+  background-color: #c40000;
+    margin: 10rem auto;
+    width:35rem;
+    top:12rem;
+    display: block;
+    height: 3.35rem;
+}
+.searchDiv input{
+    border: 1px solid transparent;
+    width: 25rem;
+    height: 3rem;
+    margin: 2px;
+    outline: none;
+}
+.searchDiv button{
+   background: #c40000;
+    width: 9rem;
+    height: 3rem;
+    border: 0;
+    color: white;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.searchBelow{
+    margin-top: 0.3rem;
+    margin-left: -0.4rem;
+    background-color: white;
+}
+.searchBelow span{
+    color: #999;
+}
+.searchBelow a{
+    padding: 0px 10px 0px 10px;
+}
+
+
+div.foot{
+   margin: 0px 0px; 
+   border-top: solid 1px #e7e7e7;
+}
+div.foot_ensuere{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+
+div.footer_desc{
+    border-top: 1px solid #e7e7e7;
+    padding-top: 30px;
+    margin: auto;
+    width: 1000px;
+}
+div.footer_desc div.descColumn{
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+}
+
+div.footer_desc div.descColumn span.descColumnTitle{
+    color: #646464;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+div.footer_desc  a{
+    display: block;
+    padding-top: 3px;
+}
+div.footerCopyright{
+ background-color: black;
+ border-top: 2px solid #c40000;
+}
+img.catEye{
+    margin-left: 150px;
+}
+div.white_link{
+    padding-top: 5px;
+    margin: auto;
+    width: 1000px;
+    line-height: 20px;
+}
+div.white_link span.slash{
+    color: white;
+}
+div.white_link a{
+    color: white;
+}
+div.white_link a{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+div.license{
+    width: 1000px;
+    margin: auto;
+    padding-top: 6px;
+    margin-bottom: 30px;
+    color: #a4a4a4;
+}
+div.license span{
+    margin-right: 40px;
+}
+div.license  div{
+    margin-top: 10px;
+}

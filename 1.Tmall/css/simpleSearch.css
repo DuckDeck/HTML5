@@ -1,0 +1,31 @@
+.simpleLogo{
+    position: absolute;
+    left: 5rem;
+    top: 1rem;
+}
+.simpleSearchDiv{
+    background-color: #c40000;
+    width:35rem;
+    top:12rem;
+    display: block;
+    height: 3.35rem;
+    margin: 10px 20px 40px;
+}
+.simpleSearchDiv input{
+    border: 1px solid transparent;
+    width: 25rem;
+    height: 3rem;
+    margin: 2px;
+    outline: none;
+}
+.simpleSearchDiv button{
+    background: #c40000;
+    width: 9rem;
+    height: 3rem;
+    border: 0;
+    color: white;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
