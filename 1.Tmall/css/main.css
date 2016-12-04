@@ -1,0 +1,103 @@
+div.categoryWithCarousel{
+    width: 100%;
+}
+div.categoryWithCarousel div.headbar{
+    background-color: #DD2727;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+div.headbar a{
+    color: white;
+}
+div.mainNav{
+    margin: auto;
+    width: 1230px;
+}
+div.head{
+    width: 200px;
+    background-color: #C60A0A;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    display: inline-block;
+}
+div .head span{
+    color: white;
+    margin-left: 5px;
+}
+
+div.categoryWithCarousel div.rightMenu{
+    display: inline-block;
+}
+
+div.categoryWithCarousel div.rightMenu a{ 
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+div.categoryWithCarousel div.rightMenu span{ 
+   margin: 0px 10px 0px 10px;
+   line-height: 30px;
+}
+
+div.categoryWithCarousel div.rightMenu img{ 
+   height: 30px;
+}
+div.categoryContent{
+    margin: auto;
+    width: 1230px;
+}
+div .carousel-of-product{
+   width: 1030px;
+   margin-left: 200px;
+}
+
+div.categoryMenu{
+    width: 200px;
+    background-color: #e2e2e2;
+    display: inline-block;
+}
+div.categoryMenu a{
+    color: #333;
+}
+div.categoryMenu a:hover{
+    color: lightskyblue;
+    text-decoration: none;
+}
+div.categoryMenu div.eachCategory{
+    width: 200px;
+    padding-left:20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    
+}
+
+div.productsAsideCategorys{
+    width: 1000px;
+    position: relative;
+  
+    float: right;
+    height: 480px;
+}
+div.productsAsideCategorys div.row{
+    margin: 20px 80px 0px 80px;
+}
+
+div.productsAsideCategorys div.row div.seperator{
+    margin-top: 20px;
+    border-bottom: 1px dashed #e7e7e7;
+}
+div.productsAsideCategorys a{
+    color: #999;
+    font-size: 14px;
+    margin: 8px;
+}
+
+div.categoryMenu div.eachCategory:hover{
+    background-color  :white;
+}
