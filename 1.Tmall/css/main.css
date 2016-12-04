@@ -63,6 +63,7 @@ div.categoryMenu{
 }
 div.categoryMenu a{
     color: #333;
+    margin-right: 3px;
 }
 div.categoryMenu a:hover{
     color: lightskyblue;
@@ -76,6 +77,10 @@ div.categoryMenu div.eachCategory{
     font-size: 14px;
     
 }
+div.categoryMenu div.eachCategory span{
+  margin-right: 2px;
+    
+}
 
 div.productsAsideCategorys{
     width: 1000px;
@@ -85,7 +90,7 @@ div.productsAsideCategorys{
     height: 480px;
 }
 div.productsAsideCategorys div.row{
-    margin: 20px 80px 0px 80px;
+    margin: 20px 60px 0px 20px;
 }
 
 div.productsAsideCategorys div.row div.seperator{
@@ -96,6 +101,10 @@ div.productsAsideCategorys a{
     color: #999;
     font-size: 14px;
     margin: 8px;
+}
+div.productsAsideCategorys a:hover{
+    color: #c40000;
+    text-decoration: none;
 }
 
 div.categoryMenu div.eachCategory:hover{
