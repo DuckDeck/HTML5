@@ -11,6 +11,10 @@ a:hover{
     color: #c40000;
     cursor: pointer;
 }
+div.searchArea{
+    margin: auto;
+    width: 1230px;
+}
 nav.topnav{
     background: #f2f2f2;
     padding-top: 0.4rem;
@@ -24,24 +28,24 @@ nav.topnav span{
     color: #999;
 }
 .logo{
-    position: absolute;
-    left: 8rem;
-    top: 6rem;
-    width: 22rem;
-    height: 12rem;
+    width: 18rem;
+    height: 10rem;
     z-index: -1;
+    margin-top: -40px;
 }
 .searchDiv{
   background-color: #c40000;
-    margin: 10rem auto;
-    width:35rem;
+    margin:  auto;
+    width:55rem;
     top:12rem;
-    display: block;
     height: 3.35rem;
+
+    margin-top: 35px;
+    display: inline-block;
 }
 .searchDiv input{
     border: 1px solid transparent;
-    width: 25rem;
+    width: 45rem;
     height: 3rem;
     margin: 2px;
     outline: none;
