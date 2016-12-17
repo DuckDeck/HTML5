@@ -1,0 +1,43 @@
+div.categoryPageDiv{
+    width: 1013px;
+    margin: 0 auto;
+}
+
+div.categorySortBar{
+    margin: 40px 20px 0px 20px;
+    background: #faf9f9;
+    padding: 4px;
+}
+table.categorySortBarTable{
+    display: inline-block;
+    border-collapse: collapse;
+}
+
+table.categorySortBarTable span.glyphicon{ 
+    font-size: 10px;
+}
+table.categorySortBarTable td{
+    height: 17px;
+    border: 1px #cccccc solid;
+    padding: 3px;
+    font-size: 12px;
+}
+table.categorySortBarTable td.graycolumn a{
+   color: gray;
+}
+table.categorySortBarTable td.graycolumn a:hover{
+   color: #c40000;
+}
+
+
+input.sortBarPrice{
+    width: 60px;
+border-width: 0px;
+}
+td.priceMiddleColumn{
+   width: 5px;
+   vertical-align: middle;
+   color: #cccccc;
+   
+}
+
