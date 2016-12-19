@@ -1,13 +1,16 @@
 /*div.imgAndInfo{
 
 }*/
+
 body{
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif
 }
 div.imgInimgAndInfo{
     width: 400px;
-    display: inline-block;
+    /*display: inline-block;*/
+    /*It's better usr float:left to let the right div on the right ,not bottom;*/
+    float: left;
 }
 
 img.bigImage{
@@ -28,65 +31,73 @@ img.smallImage:hover{
     border: 2px black solid;
 }
 
+div.imgAndInfo{
+    margin: 40px 20px;
+}
 
 div.infoInimgAndInfo{
-    display: inline-block;
-    vertical-align: top;
+    padding: 0px 20px;
+    overflow: hidden;
 }
 
 div.infoInimgAndInfo div.productTitle{
-    height: 50px;
-    padding: 30px 0px 0px 20px;
-    font-size: 20px;
+    /*height: 50px;*/
+    /*Do not write the height dead, when the broswer resize the width ,the letter will move to the second floor but it do not make the bellow tag down. which make not right*/
+    margin:0px 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 div.infoInimgAndInfo div.productSubTitle{
-    height: 30px;
-    padding: 5px 0px 0px 20px;
+
+    /*padding: 5px 0px 0px 10px;*/
+    /*use margin ,do not usr padding*/
+    margin: 0px 10px;
     color: #c40000;
 }
 
 div.infoInimgAndInfo div.productPrice{
-    height: 125px;
+    height: 135px;
    margin-top: 4px;
+  
+   opacity: 50%
 }
-
 div.productPrice div.juhuasuan{
-    background-color: green;
+    background-color: #2da77a;
     height: 50px;
     text-align: center;
     line-height: 50px;
+    margin-top: 40px;
     /*this is how to vertical in the middle just add the line-height property*/
 }
-
-div.productPrice div.juhuasuan span{
+div.productPrice div.juhuasuan{
   color: white;
 }
-
 span.juhuasuanSpan{
     font-size: 20px;
 }
-
 span.juhuasuanTime{
     color: orange;
 }
 div.productPriceDiv{
+    background-image: url(http://how2j.cn/tmall/img/site/priceBackground.png);
     padding-top: 10px;
     padding-left: 10px;
 }
 div.originPriceDiv{
-    margin-top:2px;
+    margin-top:5px;
 }
 div.originPriceDiv span.originalPriceDesc{
-    width: 30px;
+    width: 50px;
     display: inline-block;
 }
 div.originPriceDiv span.originalPrice{
     text-decoration: line-through;
 }
-
 div.promotionDiv span.promotionPriceDesc{
-    width: 30px;
+    width: 50px;
     display: inline-block;
+    position: relative;
+    top: -10px;
 }
 div.promotionDiv span.promotionPriceYuan{
     color: #c40000;
@@ -96,8 +107,10 @@ div.promotionDiv span.promotionPrice{
     font-size: 25px;
 }
 div.productSaleAndReviewNumber{
-    border-top: dashed #333333 1px;
-    border-bottom: dashed #333333 1px;
+    border-top: dotted #333333 1px;
+    border-bottom: dotted #333333 1px;
+    padding: 10px;
+    /*in this div, there are two divs, when you want to make the div not fill the parent div, just use padding , and so the middle line will not fill the Div's height. wonderful.*/
 }
 div.productSaleAndReviewNumber div{
     display: inline-block;
@@ -105,8 +118,12 @@ div.productSaleAndReviewNumber div{
     width: 49%;
     text-align: center;
     color: #555555;
-    height: 30px;
-    line-height: 30px;
+    height: 20px;
+    line-height: 20px;
+}
+div.infoInimgAndInfo div.productSaleAndReviewNumber div:first-child{
+     border-right: 1px solid #e5dfda;
+
 }
 span.productverticalLineSpan{
     /*border: 1px solid #555555;*/
@@ -120,4 +137,95 @@ span.redColor{
 }
 span.boldWord{
     font-weight: bold;
+}
+
+div.productNumber{
+    height: 30px;
+    color: #999999;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+input.productNumberSetting{
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+}
+span.productNumberSettingSpan{
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: top;
+}
+span.arrow{
+    width: 25px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+span.updownMiddle{
+    display: block;
+    height: 2px;
+}
+a.increaseNumber{
+     display: block;
+    height: 14px;
+    width: 20px;
+    border: solid #999999 1px;
+    text-align: center;
+}
+a.decreaseNumber span{
+    display: inline-block;
+    vertical-align: top;
+    height: 14px;
+    line-height: 14px;
+}
+
+a.decreaseNumber{
+     display: block;
+    height: 14px;
+    width: 20px;
+    border: solid #999999 1px;
+    text-align: center;
+}
+a.increaseNumber span{
+    display: inline-block;
+    vertical-align: top;
+    height: 14px;
+    line-height: 14px;
+}
+
+div.serviceCommitment{
+    margin-top: 15px;
+}
+span.serviceCommitmentDesc{
+    color:#999999
+}
+span.serviceCommitmentLink a{
+    color: #555555;
+    margin-left: 3px;
+}
+div.buyDiv{
+    /*margin-top: 20px;
+    padding-left: 180px;
+    font-size: 14px;*/
+    /*it's not ok to set these css to make button in the center*/
+    margin: 20px auto;
+    text-align: center;
+}
+button.buyButton{
+    width: 140px;
+    height: 35px;
+    margin-right: 10px;
+    color: #c40000;
+    border: 1px solid #c40000;
+    background-color: #fff0f0;
+}
+button.addCartButton{
+    width: 140px;
+    height: 35px;
+    border: 1px solid #c40000;
+    color: white;
+    background-color: #c40000;
 }

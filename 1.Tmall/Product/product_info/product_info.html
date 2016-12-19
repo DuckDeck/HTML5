@@ -9,8 +9,8 @@
         <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!--<link rel="stylesheet" type="" href="product_image_my.css">-->
-        <link rel="stylesheet" type="" href="product_info_my.css">
+        <link rel="stylesheet" type="" href="product_info_course.css">
+        <!--<link rel="stylesheet" type="" href="product_info_my.css">-->
     </head>
     <body>
        <div class="imgAndInfo">
@@ -48,7 +48,7 @@
                            <span class="originalPrice"> 399.9 </span>
                        </div>
                        <div class="promotionDiv">
-                           <span class="promotionPriceDesc">价格</span>
+                           <span class="promotionPriceDesc">促销价</span>
                            <span class="promotionPriceYuan">￥</span>
                            <span class="promotionPrice"> 399.9 </span>
                        </div>
@@ -62,6 +62,7 @@
                    </div>
                    <!--<span class="productverticalLineSpan">|</span> -->
                    <!--I don't know how to add the middle line, I will check the course -->
+                   <!--I know how do add teh middle, just select the first child use css div:fitst-hild to select the first child then add the border is OK-->
                    <div>
                        累计
                        <span class="redColor boldWord">19</span>
@@ -73,15 +74,15 @@
                    <span class="arrow">
                        <a href="#nowhere" class="increaseNumber">
                            <!--why in the a tag set a span tag???-->
-                           <span>
+                           <span class="updown">
                                <img src="http://how2j.cn/tmall/img/site/increase.png" alt="">
                            </span>
                        </a>
                        <span class="updownMiddle"></span>
-                        <a href="#nowhere" class="increaseNumber">
+                        <a href="#nowhere" class="decreaseNumber">
                            <!--why in the a tag set a span tag???-->
-                           <span>
-                               <img src="http://how2j.cn/tmall/img/site/increase.png" alt="">
+                           <span class="updown">
+                               <img src="http://how2j.cn/tmall/img/site/decrease.png" alt="">
                            </span>
                        </a>
                    </span>
@@ -100,8 +101,7 @@
                <div class="buyDiv">
                    <!--button can set in a "a" tag ???-->
                    <a href="#nowhere" > <button type="" class="buyButton">立即购买</button></a>
-                   <a href="#nowhere" > <button type="" class="addCartButton"><span class="glyphicon glyphicon-shopping-cart"
-                    style="color: rgb(255, 140, 60);"> 加入购物车</span></button></a>
+                   <a href="#nowhere" > <button type="" class="addCartButton"><span class="glyphicon glyphicon-shopping-cart"> 加入购物车</span></button></a>
                </div>
            </div>
            <div style="clear:both" >

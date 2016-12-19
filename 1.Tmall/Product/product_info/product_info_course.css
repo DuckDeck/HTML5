@@ -1,0 +1,207 @@
+body{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+img.bigImage{
+   padding: 20px;
+   border: 1px solid #f2f2f2;
+   width: 400px;
+   height: 400px;
+}
+div.smallImageDiv{
+    width: 80%;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+img.smallImage{
+    border: 2px white solid;
+}
+img.smallImage:hover{
+    border: 2px black solid;
+}
+
+div.imgAndInfo{
+    margin: 40px 20px;
+}
+div.imgInimgAndInfo{
+    width: 400px;
+    float: left;
+}
+div.infoInimgAndInfo{
+    padding: 0px 20px;
+    overflow: hidden;
+}
+div.infoInimgAndInfo div.productTitle{
+ color: black;
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0px 10px;
+}
+div.infoInimgAndInfo div.productSubTitle{
+ color: #dd2727;
+ font-size: 12px;
+ margin: 0px 10px;
+}
+div.infoInimgAndInfo div.juhuasuan{
+    background-color: #2da77a;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 40px;
+}
+
+div.infoInimgAndInfo span.juhuasuanSpan{
+    font-size: 18px;
+    font-family: 黑体;
+    font-weight: bold;
+}
+div.infoInimgAndInfo span.juhuasuanTime{
+    color: #ffc057;
+    font-weight: bold;
+}
+
+div.infoInimgAndInfo div.productPriceDiv{
+    background-image: url(http://how2j.cn/tmall/img/site/priceBackground.png);
+    height: 102px;
+    padding: 10px;
+    color: #666666;
+}
+div.infoInimgAndInfo div.gouwujuanDiv{
+    margin-top: 5px;
+}
+div.infoInimgAndInfo div.originalDiv{
+    margin-top: 5px;
+}
+div.infoInimgAndInfo span.originalPriceDesc{
+    color: #999999;
+    display: inline-block;
+    width: 68px;
+}
+div.infoInimgAndInfo span.originalPrice{
+    color: #333333;
+    text-decoration: line-through;
+}
+
+div.infoInimgAndInfo span.promotionPriceYuan{
+    font-size: 18px;
+    color: #c40000;
+}
+div.infoInimgAndInfo span.promotionPrice{
+    color: #c40000;
+    font-size: 30px;
+    font-weight: bold;
+}
+div.infoInimgAndInfo span.promotionPriceDesc{
+    color: #999999;
+    display: inline-block;
+    width: 68px;
+    position: relative;
+    left: 0px;
+    top: -10px;
+    /*why this span need to this,bwcause it need to be the top in the div*/
+}
+div.infoInimgAndInfo div.productSaleAndReviewNumber{
+    margin: 20px 0px;
+    border-top: dotted #c9c9c9 1px;
+    border-bottom: dotted #c9c9c9 1px;
+    padding: 10px;
+}
+
+div.infoInimgAndInfo div.productSaleAndReviewNumber div{
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+}
+div.infoInimgAndInfo div.productSaleAndReviewNumber div:first-child{
+    border-right: 1px solid #e5dfda;
+}
+
+div.infoInimgAndInfo div.productNumber{
+    color: #999999;
+}
+div.infoInimgAndInfo span.productNumberSettingSpan{
+       border: 0px;
+    height: 80%;
+    width: 80%;
+}
+div.infoInimgAndInfo input.productNumberSetting{
+    border: 1px solid #999;
+    display: inline-block;
+    width: 43px;
+    height: 32px;
+    padding-top: 7px;
+}
+div.productNumber span.updown img{
+    display:inline-block;
+    vertical-align:top;
+}
+div.productNumber span.updown{
+    border: 1px solid #999;
+    display: block;
+    width: 20px;
+    height: 14px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+div.productNumber span.updownMiddle{
+    height: 4px;
+    display: block;
+}
+div.productNumber span.arrow{
+    display: inline-block;
+    width: 22px;
+    height: 32px;
+    vertical-align: top;
+}
+div.serviceCommitment{
+    margin: 20px 0px;
+}
+div.infoInimgAndInfo span.serviceCommitmentDesc{
+    color: #999999;
+}
+div.buyDiv{
+    margin: 20px auto;
+    text-align: center;
+}
+div.buyDiv button{
+    display: inline-block;
+    margin: 0px 10px;
+    width: 180px;
+    height: 40px;
+}
+button.buyButton{
+    border: 1px solid #c40000;
+    background-color: #ffeded;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color: #c40000;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+button.addCartButton{
+     border: 1px solid #c40000;
+     background-color: #c40000;
+     text-align: center;
+     line-height: 40px;
+     font-size: 16px;
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+}
+span.glyphicon-shopping-cart{
+    margin-right: 8px;
+}
+a:hover{
+    text-decoration: none;
+}
+.redColor{
+    color: #c40000;
+}
+.boldWord{
+    font-weight: bold;
+}
