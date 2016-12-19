@@ -1,0 +1,79 @@
+body{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+div.productDetailDiv{
+    margin: 20px auto;
+    width: 1013px;
+}
+div.productDetailTopPart{
+    border:  1px solid #aaaaaa;
+    border-left: 0px;
+    margin-bottom: 40px;
+    /*height: 50px;
+    line-height: 50px;
+    font-size: 13.5px;*/
+    /*these three css is not nessary ,normally, you should let the inside tag to determine  the parent tag height */
+}
+
+
+a.deselected{
+    /*let see how the course fix it*/
+    border-left: 1px solid #999999;
+
+    
+    display: inline-block;
+    font-weight: bold;
+    line-height: 46px;
+    width: 120px;
+    text-align: center;
+    position: relative;
+}
+
+
+a.selected{
+    /*let see how the course fix it*/
+    border-left: 1px solid #cfbfb1;
+    border-right: 1px solid #cfbfb1;
+    color: #b10000;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 46px;
+    width: 120px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+  a.productDetailTopReviewLink{
+      padding: 0px 20px;
+      /*so i need to remenber this property. it will set the border do not fill all the border*/
+      border-right: 1px dotted #d2d2d2;
+  }
+
+div.productReviewItem{
+    border-bottom: 1px solid #aaaaaa;
+}
+
+div.productReviewItemDesc{
+    width: 75.5%;
+    padding-left: 20px;
+    margin-top: 10px;
+    display: inline-block;
+
+}
+div.productReviewItemDate{
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+div.productReviewItemUserInfo{
+    width: 20%;
+  float: right;
+line-height: 70px;
+/*this is a serious problem, when the div height is not the same ,it depands the brother content, so i can not set tht line-height 
+and it can not in the middle ,i need check the cource how to address it.*/
+
+}

@@ -1,0 +1,78 @@
+div.productDetailDiv{
+    margin: 20px auto;
+    width: 1013px;
+}
+div.productDetailTopPart{
+   border: 1px solid #aaaaaa;
+   border-left-width: 0px;
+}
+a.selected{
+    /*let see how the course fix it*/
+    border-left: 1px solid #cfbfb1;
+    border-right: 1px solid #cfbfb1;
+    color: #b10000;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 46px;
+    width: 90px;
+    text-align: center;
+    position: relative;
+}
+a.selected:before{
+   display: block;
+   border:1px solid #b00000;
+    width: 90px;
+    height: 0;
+    position: absolute;
+    top: -1px;
+    margin-left: -1px;
+     cotent:"",
+}
+a.selected:after{
+    display: block;
+    border:5px solid #b00000 transparent transparent;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    margin-left: -5px;
+    cotent:"",   
+  }
+  /*why the trangle and line do not appare????? it worded in the course*/
+
+  a.productDetailTopReviewLink{
+      padding: 0px 20px;
+      /*so i need to remenber this property. it will set the border do not fill all the border*/
+      border-right: 1px dotted #d2d2d2;
+  }
+  span.productDetailTopReviewLinkNumber{
+      color: #3355b9;
+  }
+   div.productParamterPart{
+     border: 1px solid #dfdfdf;
+     padding: 40px;
+
+  }
+  div.productParamter{
+      color: #999999;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+ 
+  div.productParamterList span{
+      display: block;
+      width: 220px;
+      float: left;
+      padding: 8px 0px;
+      color: #666666;
+  }
+    div.productDetailImagesPart img{
+        display: block;
+        width: 100%;
+        margin: 20px 0px;
+    }
+    a:hover{
+        text-decoration: none;
+        color: #c40000;
+    }
