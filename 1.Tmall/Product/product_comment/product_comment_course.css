@@ -6,6 +6,18 @@ div.productDetailTopPart{
    border: 1px solid #aaaaaa;
    border-left-width: 0px;
 }
+a.deselected{
+    /*let see how the course fix it*/
+    border-left: 1px solid #999999;
+
+    
+    display: inline-block;
+    font-weight: bold;
+    line-height: 46px;
+    width: 120px;
+    text-align: center;
+    position: relative;
+}
 a.selected{
     /*let see how the course fix it*/
     border-left: 1px solid #cfbfb1;
@@ -14,7 +26,7 @@ a.selected{
     display: inline-block;
     font-weight: bold;
     line-height: 46px;
-    width: 90px;
+    width: 120px;
     text-align: center;
     position: relative;
 }
@@ -46,3 +58,38 @@ a.selected:after{
       /*so i need to remenber this property. it will set the border do not fill all the border*/
       border-right: 1px dotted #d2d2d2;
   }
+
+  div.productReviewContentPart{
+      padding-top: 50px;
+  }
+div.productReviewItem{
+    border-bottom: 1px solid #e3e3e3;
+    margin: 10px 0px;
+
+}
+
+div.productReviewItem div.productReviewItemDesc{
+    width: 80%;
+    /*display: inline-block;*/
+    color: #333333;
+    margin: 5px 20px;
+    float: left;
+}
+
+div.productReviewItemDate{
+    margin: 15px 0px 0px 0px;
+    color: #cccccc;
+}
+
+div.productReviewItem div.productReviewItemUserInfo{
+    color: #404040;
+    margin: 5px 20px;
+    padding: 20px 0;
+}
+span.userInfoGrayPart{
+    color: #999999;
+}
+a:hover{
+    color: #c40000;
+    text-decoration: none;
+}
