@@ -137,7 +137,7 @@ div.infoInimgAndInfo input.productNumberSetting{
     display: inline-block;
     width: 43px;
     height: 32px;
-    padding-top: 7px;
+    /*padding-top: 7px;*/
 }
 div.productNumber span.updown img{
     display:inline-block;
@@ -219,6 +219,15 @@ div.productReviewTopPart{
 a.productReviewTopPartSelectedLink{
     padding: 0px 20px;
     color: #333333;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+}
+a.productReviewTopReviewLinkNumber{
+    padding: 0px 20px;
+     width: 120px;
+    display: inline-block;
+    text-align: center;
 }
 a.selected{
     border-left: 1px solid #cfbfb1;
@@ -227,7 +236,7 @@ a.selected{
     display: inline-block;
     font-weight: bold;
     line-height: 46px;
-    width: 90px;
+    width: 120px;
     text-align: center;
     position: relative;
 }
@@ -237,11 +246,12 @@ a.selected:before{
     border-width: 1px;
     border-style: solid;
     border-color: #b00000;
-    width: 90px;
+    width: 120px;
     height: 0;
     position: absolute;
     top: -1px;
     margin-left: -1px;
+    padding-left: 0px;
 }
 a.selected:after{
     content: "";
@@ -304,19 +314,21 @@ a.selected{
     display: inline-block;
     font-weight: bold;
     line-height: 46px;
-    width: 90px;
+    width: 120px;
     text-align: center;
     position: relative;
 }
 a.selected:before{
    display: block;
    border:1px solid #b00000;
-    width: 90px;
+    width: 120px;
     height: 0;
     position: absolute;
     top: -1px;
-    margin-left: -1px;
-     cotent:"",
+    margin-left: -20px;
+
+     cotent:"";
+
 }
 a.selected:after{
     display: block;
@@ -327,7 +339,7 @@ a.selected:after{
     top: -1px;
     left: 50%;
     margin-left: -5px;
-    cotent:"",   
+    cotent:"";
   }
   /*why the trangle and line do not appare????? it worded in the course*/
 

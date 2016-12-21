@@ -45,4 +45,19 @@ $(function(){
             num = 1
         $('.productNumberSetting').val(num)
     })
+
+    $('.productReviewContentPart').hide()
+
+    $('.productReviewTopPart a').click(function(){
+       $(this).siblings().removeClass('selected')
+       $(this).addClass('selected')
+       if ($(this).attr('id') == 'productDetail'){
+           $('.productParamterPart').show()
+           $('.productReviewContentPart').hide()
+       }
+       else{
+           $('.productParamterPart').hide()
+           $('.productReviewContentPart').show()
+       }
+    })
 })
