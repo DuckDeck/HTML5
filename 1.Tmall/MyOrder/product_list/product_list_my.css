@@ -1,0 +1,57 @@
+body{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif
+}
+div.boughtDiv{
+    width: 1024px;
+    margin: 10px auto;
+}
+table.orderListItemTable{
+    width: 100%;
+}
+table.orderListItemTable tr.orderListItemFirstTR{
+    background-color: #eee;
+    height: 40px;
+}
+a.deleteOrderLink{
+    margin-left: 70px;
+    color: #aaa;
+    font-size: 16px;
+
+}
+td.orderItemProductInfoPartTD img{
+ margin: 10px;
+ width: 120px;
+ height: 120px;
+}
+div.orderListItemProductLinkOutDiv{
+    height: 130px;
+}
+div.orderListItemProductLinkOutDiv a{ 
+    color: #999
+}
+div.orderListItemProductLinkOutDiv a:hover{ 
+    color: #c40000;
+    text-decoration: none;
+}
+div.orderListItemProductLinkOutDiv div.orderListItemProductLinkInnerDiv{
+    margin-top: 80px;
+}
+td.orderListItemNumberTD{
+    border-left: 1px solid #eee;
+    text-align: center;
+}
+td.orderListItemProductRealPriceTD{
+    border-left:1px solid #eee;
+    text-align: center;
+}
+td.orderListItemProductRealPriceTD div.orderListItemProductRealPrice{
+    font-weight: bold;
+}
+td.orderListItemProductRealPriceTD div.orderListItemPriceWithTransport{
+    color: #999;
+}
+td.orderListItemButtonTD{
+    border-left:1px solid #eee;
+    text-align: center;
+}

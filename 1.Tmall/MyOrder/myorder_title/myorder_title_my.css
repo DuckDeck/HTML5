@@ -1,0 +1,53 @@
+body{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif
+}
+div.bouthtDiv{
+    width: 1024px;
+    margin: 10px auto;
+}
+
+
+/*in the div tag just use the a tag to fullfill the vertical line. do not usr the outer div*/
+div.orderType div{
+    border-bottom: 2px solid #eee;
+    float: left;
+}
+div.orderType a{
+    display: inline-block;
+    margin: 10px 0;
+    border-right: 1px solid #eee;
+    padding: 0px 20px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+div.orderType a:hover{
+    color: #c40000;
+    text-decoration: none;
+}
+div.orderType a.noRightborder{
+    border-right-width: 0px !important;
+}
+div.selectedOrderType{
+    border-bottom: 2px solid #c40000 !important;
+}
+div.selectedOrderType a{
+    color: #c40000;
+}
+div.orderTypeLastOne{
+    overflow: hidden;
+    float: none !important;
+    border-bottom: 2px #eee solid;
+    height: 44px;
+}
+div.orderListTitle{
+    margin-top: 20px;
+    background-color: #eeeeee;
+    height: 40px;
+    line-height: 40px;
+}
+table.orderListTitleTable{
+    width: 100%;
+    text-align: center;
+}
