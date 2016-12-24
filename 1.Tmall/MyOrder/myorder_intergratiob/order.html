@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="" href="order.css">
+        <script src="order.js"></script>
+    </head>
+    <body>  
+       <div class="bouthtDiv">
+
+           <div class="orderType">
+               <div class="selectedOrderType">
+                   <a href="#nowhere" orderstatus = "all">所有订单</a>
+               </div>
+               <div>
+                   <a href="#nowhere" orderstatus = "waitPay" >待付款</a>
+               </div>
+               <div>
+                   <a href="#nowhere" orderstatus = "waitDelivery">待发货</a>
+               </div>
+               <div>
+                   <a href="#nowhere" orderstatus = "waitConfirm">待收货</a>
+               </div>
+               <div>
+                   <a class="noRightborder" href="#nowhere" orderstatus = "waitReview">待评价</a>
+               </div>
+               <div class="orderTypeLastOne">
+                   
+               </div>
+           </div>
+           <div style="clear:both"> </div>
+           <div class="orderListTitle">
+               <table  class="orderListTitleTable">
+                   <tbody>
+                       <tr>
+                           <td>宝贝</td>
+                           <td width="100px">单价</td>
+                           <td width="100px">数量</td>
+                           <td width="120px">实付款</td>
+                           <td width="100px">交易操作</td>
+                       </tr>
+                   </tbody>
+               </table>
+           </div>
+
+
+             <div class="orderListItem">
+                <table oid="946" orderstatus="waitReview" class="orderListItemTable">
+                    <tbody>
+                        <tr class="orderListItemFirstTR">
+                            <td colspan="2">
+                                <b>2016-09-12 17:00:41</b>
+                                <span> 订单号:</span>
+                                <span>20160912170041674794</span>
+                                
+                            </td>
+                            <td colspan="2">
+                                <img width="13px" src="http://how2j.cn/tmall/img/site/orderItemTmall.png">天猫商场
+                            </td>
+                            <td>
+                                <a href="#nowhere" class="wangwanglink"><div class="orderItemWangWangGif"></div></a>
+                            </td>
+                            <td class="orderItemDeleteTD">
+                                <a href="#nowhere" class="deleteOrderLink"><span class="orderListItemDelete glyphicon glyphicon-trash"> </span></a>
+                            </td>
+                        </tr>
+                        <tr class="orderItemProductInfoPartTR">
+                            <td class="orderItemProductInfoPartTD">
+                                <img src="http://how2j.cn/tmall/img/productSingle_middle/3796.jpg" alt="">
+                            </td>
+                            <td>
+                                <div class="orderListItemProductLinkOutDiv">
+                                    <a href="#nowhere">公众智能扫地机器人家用全自动电动清洁地毯擦拖地一体机吸尘器</a>
+                                    <div class="orderListItemProductLinkInnerDiv">
+                                        <img title="支持信用卡支付" src="http://how2j.cn/tmall/img/site/creditcard.png">
+                                        <img title="消费者保障服务,承诺7天退货" src="http://how2j.cn/tmall/img/site/7day.png">
+                                        <img title="消费者保障服务,承诺如实描述" src="http://how2j.cn/tmall/img/site/promise.png">   
+                                    </div>
+                                </div>
+                            </td>
+                            <td  width="100px" class="orderItemProductInfoPartTD">
+                                <div class="orderListItemProductOriginalPrice">￥2,124.15</div>
+                                <div class="orderListItemProductPrice">￥2,124.15</div> 
+                            </td>
+                            <td width="100px" class="orderListItemNumberTD orderItemOrderInfoPartTD" rowspan="1">
+                                 <span class="orderListItemNumber">1</span>
+                            </td>
+                            <td width="120px" class="orderListItemProductRealPriceTD orderItemOrderInfoPartTD" rowspan="1">
+                                <div class="orderListItemProductRealPrice">￥1,128.60</div>
+                                <div class="orderListItemPriceWithTransport">(含运费：￥0.00)</div>
+                            </td>
+                            <td width="100px" class="orderListItemButtonTD orderItemOrderInfoPartTD" rowspan="1">
+                               <a href="#nowhere"><button class="orderListItemReview" >评价</button></a> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <table oid="945" orderstatus="waitconfirm" class="orderListItemTable">
+                    <tbody>
+                        <tr class="orderListItemFirstTR">
+                            <td colspan="2">
+                                <b>2016-09-12 17:00:41</b>
+                                <span> 订单号:</span>
+                                <span>20160912170041674794</span>
+                                
+                            </td>
+                            <td colspan="2">
+                                <img width="13px" src="http://how2j.cn/tmall/img/site/orderItemTmall.png">天猫商场
+                            </td>
+                            <td>
+                                <a href="#nowhere" class="wangwanglink"><div class="orderItemWangWangGif"></div></a>
+                            </td>
+                            <td class="orderItemDeleteTD">
+                                <a href="#nowhere" class="deleteOrderLink"><span class="glyphicon glyphicon-trash"> </span></a>
+                            </td>
+                        </tr>
+                        <tr class="orderItemProductInfoPartTR">
+                            <td class="orderItemProductInfoPartTD">
+                                <img src="http://how2j.cn/tmall/img/productSingle_middle/3796.jpg" alt="">
+                            </td>
+                            <td>
+                               <div class="orderListItemProductLinkOutDiv">
+                                    <a href="#nowhere">公众智能扫地机器人家用全自动电动清洁地毯擦拖地一体机吸尘器</a>
+                                    <div class="orderListItemProductLinkInnerDiv">
+                                        <img title="支持信用卡支付" src="http://how2j.cn/tmall/img/site/creditcard.png">
+                                        <img title="消费者保障服务,承诺7天退货" src="http://how2j.cn/tmall/img/site/7day.png">
+                                        <img title="消费者保障服务,承诺如实描述" src="http://how2j.cn/tmall/img/site/promise.png">   
+                                    </div>
+                                </div>
+                            </td>
+                            <td  width="100px" class="orderItemProductInfoPartTD">
+                                <div class="orderListItemProductOriginalPrice">￥2,124.15</div>
+                                <div class="orderListItemProductPrice">￥2,124.15</div> 
+                            </td>
+                            <td width="100px" class="orderListItemNumberTD orderItemOrderInfoPartTD" rowspan="1">
+                                 <span class="orderListItemNumber">1</span>
+                            </td>
+                            <td width="120px" class="orderListItemProductRealPriceTD orderItemOrderInfoPartTD" rowspan="1">
+                                <div class="orderListItemProductRealPrice">￥1,128.60</div>
+                                <div class="orderListItemPriceWithTransport">(含运费：￥0.00)</div>
+                            </td>
+                            <td width="100px" class="orderListItemButtonTD orderItemOrderInfoPartTD" rowspan="1">
+                               <a href="#nowhere"><button class="orderListItemConfirm" >确认收货</button></a> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                   <table oid="945" orderstatus="waitDelivery" class="orderListItemTable">
+                    <tbody>
+                        <tr class="orderListItemFirstTR">
+                            <td colspan="2">
+                                <b>2016-09-12 17:00:41</b>
+                                <span> 订单号:</span>
+                                <span>20160912170041674794</span>
+                                
+                            </td>
+                            <td colspan="2">
+                                <img width="13px" src="http://how2j.cn/tmall/img/site/orderItemTmall.png">天猫商场
+                            </td>
+                            <td>
+                                <a href="#nowhere" class="wangwanglink"><div class="orderItemWangWangGif"></div></a>
+                            </td>
+                            <td class="orderItemDeleteTD">
+                                <a href="#nowhere" class="deleteOrderLink"><span class="glyphicon glyphicon-trash"> </span></a>
+                            </td>
+                        </tr>
+                        <tr class="orderItemProductInfoPartTR">
+                            <td class="orderItemProductInfoPartTD">
+                                <img src="http://how2j.cn/tmall/img/productSingle_middle/3796.jpg" alt="">
+                            </td>
+                            <td>
+                               <div class="orderListItemProductLinkOutDiv">
+                                    <a href="#nowhere">公众智能扫地机器人家用全自动电动清洁地毯擦拖地一体机吸尘器</a>
+                                    <div class="orderListItemProductLinkInnerDiv">
+                                        <img title="支持信用卡支付" src="http://how2j.cn/tmall/img/site/creditcard.png">
+                                        <img title="消费者保障服务,承诺7天退货" src="http://how2j.cn/tmall/img/site/7day.png">
+                                        <img title="消费者保障服务,承诺如实描述" src="http://how2j.cn/tmall/img/site/promise.png">   
+                                    </div>
+                                </div>
+                            </td>
+                            <td  width="100px" class="orderItemProductInfoPartTD">
+                                <div class="orderListItemProductOriginalPrice">￥2,124.15</div>
+                                <div class="orderListItemProductPrice">￥2,124.15</div> 
+                            </td>
+                            <td width="100px" class="orderListItemNumberTD orderItemOrderInfoPartTD" rowspan="1">
+                                 <span class="orderListItemNumber">1</span>
+                            </td>
+                            <td width="120px" class="orderListItemProductRealPriceTD orderItemOrderInfoPartTD" rowspan="1">
+                                <div class="orderListItemProductRealPrice">￥1,128.60</div>
+                                <div class="orderListItemPriceWithTransport">(含运费：￥0.00)</div>
+                            </td>
+                            <td width="100px" class="orderListItemButtonTD orderItemOrderInfoPartTD" rowspan="1">
+                               <!--<a href="#nowhere"><button  >待发货</button></a> -->
+                               <!--待发货 just use span is ok-->
+
+                               <span>待发货 </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                   <table oid="945" orderstatus="waitPay" class="orderListItemTable">
+                    <tbody>
+                        <tr class="orderListItemFirstTR">
+                            <td colspan="2">
+                                <b>2016-09-12 17:00:41</b>
+                                <span> 订单号:</span>
+                                <span>20160912170041674794</span>
+                                
+                            </td>
+                            <td colspan="2">
+                                <img width="13px" src="http://how2j.cn/tmall/img/site/orderItemTmall.png">天猫商场
+                            </td>
+                            <td>
+                                <a href="#nowhere" class="wangwanglink"><div class="orderItemWangWangGif"></div></a>
+                            </td>
+                            <td class="orderItemDeleteTD">
+                                <a href="#nowhere" class="deleteOrderLink"><span class="glyphicon glyphicon-trash"> </span></a>
+                            </td>
+                        </tr>
+                        <tr class="orderItemProductInfoPartTR">
+                            <td class="orderItemProductInfoPartTD">
+                                <img src="http://how2j.cn/tmall/img/productSingle_middle/3796.jpg" alt="">
+                            </td>
+                            <td>
+                               <div class="orderListItemProductLinkOutDiv">
+                                    <a href="#nowhere">公众智能扫地机器人家用全自动电动清洁地毯擦拖地一体机吸尘器</a>
+                                    <div class="orderListItemProductLinkInnerDiv">
+                                        <img title="支持信用卡支付" src="http://how2j.cn/tmall/img/site/creditcard.png">
+                                        <img title="消费者保障服务,承诺7天退货" src="http://how2j.cn/tmall/img/site/7day.png">
+                                        <img title="消费者保障服务,承诺如实描述" src="http://how2j.cn/tmall/img/site/promise.png">   
+                                    </div>
+                                </div>
+                            </td>
+                            <td  width="100px" class="orderItemProductInfoPartTD">
+                                <div class="orderListItemProductOriginalPrice">￥2,124.15</div>
+                                <div class="orderListItemProductPrice">￥2,124.15</div> 
+                            </td>
+                            <td width="100px" class="orderListItemNumberTD orderItemOrderInfoPartTD" rowspan="1">
+                                 <span class="orderListItemNumber">1</span>
+                            </td>
+                            <td width="120px" class="orderListItemProductRealPriceTD orderItemOrderInfoPartTD" rowspan="1">
+                                <div class="orderListItemProductRealPrice">￥1,128.60</div>
+                                <div class="orderListItemPriceWithTransport">(含运费：￥0.00)</div>
+                            </td>
+                            <td width="100px" class="orderListItemButtonTD orderItemOrderInfoPartTD" rowspan="1">
+                               <a href="#nowhere"><button class="orderListItemConfirm" >付款</button></a> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+       </div>
+
+
+    </body>
+</html>
