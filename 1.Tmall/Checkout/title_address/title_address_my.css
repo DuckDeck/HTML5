@@ -1,0 +1,46 @@
+body{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+div.buyPageDiv{
+    width: 1024px;
+    margin: 10px auto;
+}
+div.addressTip{
+    color: black;
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin:10px 0px;
+}
+table.addressTable{
+    margin: 20px 20px;
+    width: 600px;
+}
+table.addressTable td{
+    color: #333333;
+    text-align: right;
+    vertical-align: top;
+    padding-right: 5px;
+    text-align: left;
+    height: 30px;
+}
+table.addressTable td.firstColumn{
+    width: 100px;   
+}
+
+table.addressTable td textarea{
+    border: 1px solid #afafaf;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+table.addressTable td input{
+    border: 1px solid #afafaf;
+    width: 250px;
+}
+span.redStar{
+    color: #c40000;
+    font-size: 8px;
+}
