@@ -1,0 +1,74 @@
+body{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif
+}
+div.cartDiv{
+    width: 1024px;
+    margin: 10px auto;
+}
+table.cartProductTable{
+    width: 100%;
+}
+table.cartProductTable tbody tr{
+    border: 1px solid #ccc;
+}
+table.cartProductTable thead tr{
+    height: 40px;
+    vertical-align: top;
+}
+table.cartProductTable th{
+    color: #666;
+    font-weight: normal;
+    padding-left: 10px;
+}
+table.cartProductTable td{
+    padding: 10px;
+}
+th.selectAndImage{
+    width: 170px;
+}
+img.cartProductImg{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.cartProductLinkOutDiv{
+    height: 100px;
+}
+a.artProductLink{
+    color: #666;
+}
+a.artProductLink:hover{
+    color: #c40000;
+}
+div.cartProductLinkOutDiv div.cartProductLinkInnerDiv{
+    margin-top: 60px;
+}
+div.cartProductItemOringalPrice{
+    font-size: 16px;
+    text-decoration: line-through;
+    font-weight: bold;
+    color: #aaa;
+}
+div.cartProductItemPromotionPrice{
+    font-size: 16px;
+    font-weight: bold;
+    color: #c40000;
+}
+input.orderItemNumberSetting{
+    width: 40px;
+    height: 20px;
+}
+a.numberMinus{
+    border: 1px solid #aaa;
+    padding: 0px 6px;
+}
+a.numberPlus{
+    border: 1px solid #aaa;
+    padding: 0px 6px;
+}
+span.cartProductItemSmallSumPrice{
+    color: #c40000;
+    font-weight: bold;
+    font-size: 16px;
+}
