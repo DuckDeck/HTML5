@@ -1,0 +1,182 @@
+body{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+div.buyPageDiv{
+    width: 1024px;
+    margin: 10px auto;
+}
+div.addressTip{
+    color: black;
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin:10px 0px;
+}
+table.addressTable{
+    margin: 20px 20px;
+    width: 600px;
+}
+table.addressTable td{
+    color: #333333;
+    text-align: right;
+    vertical-align: top;
+    padding-right: 5px;
+    text-align: left;
+    height: 30px;
+}
+table.addressTable td.firstColumn{
+    width: 100px;   
+}
+
+table.addressTable td textarea{
+    border: 1px solid #afafaf;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+table.addressTable td input{
+    border: 1px solid #afafaf;
+    width: 250px;
+}
+span.redStar{
+    color: #c40000;
+    font-size: 8px;
+}
+
+div.productList{
+    margin-top: 40px;
+}
+
+div.productListTip{
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+table.productListTable{
+    width: 100%;
+}
+table.productListTable th{
+    color: #999;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+th.productListTableFirstColumn{
+    text-align: left !important;
+}
+th.productListTableFirstColumn img.tmallbuy{
+    width: 18px;
+    height: 18px;
+}
+th.productListTableFirstColumn a.marketLink{
+    color: #333;
+}
+span.wangwangGif{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image:url(http://how2j.cn/tmall/img/site/wangwang.gif);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-attachment: scroll;
+    background-position: -83px -0px;
+    position: relative;
+    top: 8px;
+    left: 2px;
+}
+
+tr.orderItemTR td{
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0px;
+}
+td.orderItemFirstTD{
+    border-bottom: 0px !important;
+}
+
+tr.rowborder td{
+    height: 3px;
+     border-right: 2px solid white;
+    background-color:#ee2312;
+    /*how can i make the gap between these tr??????/*/
+    /*it's not a border stuff, just use the backgroung-color property and right border to make it*/
+    /*it looks like that i do not think profand*/
+}
+td.orderItemFirstTD img{
+    width: 50px;
+    height: 50px;
+
+}
+
+a.orderItemProductLink{
+    display: block;
+    color: #777;
+    font-size: 14px;
+}
+span.orderItemProductPrice{
+    font-size: 14px;
+}
+span.orderItemProductNumber{
+    font-size: 14px;
+}
+span.orderItemUnitSum{
+    color: #c40000;
+    font-weight: bold;
+    font-size: 14px;
+}
+td.orderItemLastTD{
+    text-align: center;
+}
+label.orderItemDeliveryLabel{
+    /*how to set these two tag in one line I do'know???*/
+    font-weight: normal;
+}
+select.orderItemDeliverySelect{
+    width: 100px;
+}
+div.orderItemSumDiv{
+    border-top: 2px solid #23e434;
+    background-color: #f3f6ff;
+    height: 60px;
+    padding-left: 30px;
+    line-height: 60px;
+    padding-right: 20px;
+    text-align: left !important;
+    color: #888;
+}
+span.leaveMessageText{
+    color: #aaa;
+
+}
+textarea.leaveMessageTextarea {
+    border: 1px solid #FFAD35;
+    width: 250px;
+    height: 60px;
+    resize: none;
+}
+div.orderItemTotalSumDiv{
+    margin: 40px;
+    height: 40px;
+}
+div.orderItemTotalSumDiv span{
+    color: #999;
+}
+div.orderItemTotalSumDiv span.orderItemTotalSumSpan{
+    font-size: 22px;
+    color: #c40000;
+    font-weight: bold;
+}
+button.submitOrderButton{
+     margin: 0px 10px;
+    width: 180px;
+    height: 40px;
+    background-color: #c40000;
+    color: white;
+    font-size: 17px;
+    border: #c40000;
+    float: right;
+    font-weight: bold;
+}
