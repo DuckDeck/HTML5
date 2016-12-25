@@ -18,18 +18,28 @@ function formatMoney(num){
 function syncCreateOrderButton() {
     var selectAny = false
     var allSelected = true
-    var count = 0
+    var allCount = 0
+    var sum = 0.0
     $('.productCheck').each(function(){
         if($(this).prop('checked')){
             selectAny = true
             $(this).parent().parent().css('background-color','#eeeeee')
-        
+            let oii = $(this).attr('oiid')
+            var price = $(".cartProductItemSmallSumPrice[oiid="+oii+"]").text()
+            price = price.replace(/,/g,'')
+            price = price.replace(/￥/g,'')
+            sum += new Number(price)
+            count =  $(".orderItemNumberSetting[oiid="+oii+"]").val()
+            allCount += new Number(count)
         }
         else{
              allSelected = false
              $(this).parent().parent().css('background-color','white')
         }
     })
+    $("span.cartSumPrice").html("￥"+formatMoney(sum));
+    $("span.cartTitlePrice").html("￥"+formatMoney(sum));
+    $('span.cartSumNumber').text(allCount)
      $('.allCheckbox').prop('checked',allSelected)
     if(selectAny){
         $("button.createOrderButton").css("background-color","#C40000");
@@ -54,15 +64,45 @@ function checkAll(isCheck) {
 
 
 
+
 $(function(){
     $('.productCheck').click(function(){
         syncCreateOrderButton()
-      
     })
 
     $('.allCheckbox').click(function() {
         let isCheck = $(this).prop('checked')
         checkAll(isCheck)
+        syncCreateOrderButton()
+    })
+
+    $('.numberMinus').click(function(){
+        let pid = $(this).attr('pid')
+        let count =new Number($('.orderItemNumberSetting[pid='+pid+']').val())
+        var singlePrice =  $('.cartProductItemSmallSumPrice[pid='+pid+']').text()
+        singlePrice = singlePrice.replace(/,/g,'')
+        singlePrice = singlePrice.replace(/￥/g,'')
+        if(count > 0)singlePrice = singlePrice / count
+        if(count > 1){
+            count --   
+        }
+        $('.orderItemNumberSetting[pid='+pid+']').val(count)
+        $('.cartProductItemSmallSumPrice[pid='+pid+']').text("￥"+formatMoney(singlePrice * count));
+        syncCreateOrderButton()
+    })
+    $('.numberPlus').click(function(){
+        let pid = $(this).attr('pid')
+        var singlePrice =  $('.cartProductItemSmallSumPrice[pid='+pid+']').text()
+        singlePrice = singlePrice.replace(/,/g,'')
+        singlePrice = singlePrice.replace(/￥/g,'')
+        let count =new Number($('.orderItemNumberSetting[pid='+pid+']').val())
+        if(count > 0)singlePrice = singlePrice / count
+        let stock =new Number( $(this).attr('stock'))
+        if(count <= stock){
+            count ++
+        }
+        $('.orderItemNumberSetting[pid='+pid+']').val(count)
+        $('.cartProductItemSmallSumPrice[pid='+pid+']').text("￥"+formatMoney(singlePrice * count));
         syncCreateOrderButton()
     })
 })
