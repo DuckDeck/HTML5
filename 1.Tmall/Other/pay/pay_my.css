@@ -1,0 +1,36 @@
+div.aliPayPageDiv{
+    width: 1024px;
+    margin: 10px auto;
+    text-align: center;
+}
+div.confirmMoneyText{
+    text-align: center;
+    color: #444;
+    padding: 10px 0px;
+    font-size: 13px;
+}
+div.confirmMoney{
+    text-align: center;
+    padding-bottom: 10px;
+    color: #c40000;
+    font-weight: bold;
+    font-size: 20px;
+}
+img.aliPayImg{
+    margin:0px auto;
+}
+
+div.confirmPayDiv{
+    text-align: center;
+    padding-top: 20px;
+}
+button.confirmPay{
+   width: 120px;
+   height: 40px;
+
+    color: white;
+    background-color: #00AAEE;
+    padding: 5px;
+    font-weight: bold;
+    border-width: 0px;
+}

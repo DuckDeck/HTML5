@@ -1,0 +1,13 @@
+div.orderFinishDiv{
+    max-width: 1024px;
+    margin: 10px auto;
+}
+
+div.orderFinishTextDiv{
+    border: 1px solid #ddd;
+    padding: 40px 30px;
+}
+div.orderFinishTextDiv span{
+    margin-left: 10px;
+    font-weight: bold;
+}

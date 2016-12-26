@@ -1,0 +1,128 @@
+body{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif
+}
+div.confirmPayPageDiv{
+    max-width: 1024px;
+    margin: 10px auto;
+}
+div.confirmPayImageDiv{
+    padding: 15px 30px;
+    margin-top: 10px;
+}
+div.confirmPayImageDiv img{
+    padding:0px 15px;
+}
+div.confirmPayTime1{
+    color: #999;
+    padding: 25px 0px;
+    display: inline-block;
+}
+div.confirmPayTime2{
+    position: relative;
+    left: 80px;
+    color: #999;
+    display: inline-block;
+
+}
+div.confirmPayTime3{
+    position: relative;
+    left: 170px;
+    color: #999;
+    display: inline-block;
+}
+div.confirmPayOrderInfoDiv{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid green;
+    padding-bottom: 10px;
+}
+div.confirmPayOrderItemDiv{
+    padding: 15px 10px;
+
+}
+div.confirmPayOrderItemDiv div.confirmPayOrderItemText{
+    font-size: 15px;
+}
+table.confirmPayOrderItemTable{
+    width: 100%;
+     text-align: center;
+}
+table.confirmPayOrderItemTable tr{
+    
+    border: 1px solid #ddd;
+    
+}
+table.confirmPayOrderItemTable th{
+
+    text-align: center;
+    background-color: #E8F2FF;
+    padding: 1px 0px;
+}
+table.confirmPayOrderItemTable td{
+    padding: 18px;
+}
+td.confirmPayOrderItemProductLink{
+    text-align: left;
+}
+td.confirmPayOrderItemProductLink a{ 
+    color: #999;
+}
+td.confirmPayOrderItemProductLink a:hover{
+    color: #c40000;
+    text-decoration: none;
+}
+
+span.conformPayProductPrice{
+    font-size: 20px;
+    color: #777;
+}
+div.confirmPayOrderItemText{
+    font-size: 15px;
+    padding-right:20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+span.confirmPayOrderItemSumPrice{
+    color: #c40000;
+}
+
+table.confirmPayOrderDetailTable{
+    border-top: 1px solid #ddd;
+    margin-top: 60px;
+    width: 94%;
+    margin-left: 30px;
+}
+table.confirmPayOrderDetailTable td {
+    padding: 10px 20px 5px 0px;
+    font-size: 14px;
+}
+span.confirmPayOrderDetailWangWangGif{
+    display: inline-block;
+    width: 67px;
+    height: 22px;
+    background-image:url(http://how2j.cn/tmall/img/site/wangwang.gif);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: relative;
+    left: 2px;
+    cursor: pointer
+}
+div.confirmPayButtonDiv{
+    padding: 20px 50px;
+    margin-top: 45px;
+    border: 1px solid orange;
+}
+div.confirmPayWarning{
+    font-weight: bold;
+    color: #c40000;
+    font-size: 16px;
+}
+button.confirmPayButton{
+    margin-top: 40px;
+    border-radius: 4px;
+    background: orange;
+    border: 1px solid #c40000;
+    color: white;
+    padding: 5px;
+}
