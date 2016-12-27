@@ -1,0 +1,46 @@
+body{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.loginDiv{
+    margin: 0px auto;
+    max-width: 1024px;
+    overflow: hidden;
+}
+div.simpleLogo{
+    padding: 25px 0px;
+}
+
+div.loginSmallDiv{
+    position: relative;
+    top: -420px;
+    left: 650px;
+    background: white;
+    padding: 40px 20px;
+    width: 280px;
+    height: 330px;
+}
+div.login_acount_text{
+    font-weight: bold;
+    margin-bottom: 18px;
+    font-size: 15px;
+    color: #555;
+}
+div.loginInput{
+    border: 1px solid #ddd;
+    height: 30px;
+    
+}
+span.loginInputIcon{
+    background: #ddd;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    vertical-align: top;
+    text-align: center;
+    line-height: 30px;
+}
+div.loginInput input{
+    border: 0px;
+    margin-top: 3px;
+}
