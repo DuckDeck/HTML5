@@ -13,7 +13,7 @@ div.simpleLogo{
 
 div.loginSmallDiv{
     position: relative;
-    top: -420px;
+    top: -480px;
     left: 650px;
     background: white;
     padding: 40px 20px;
@@ -43,4 +43,5 @@ span.loginInputIcon{
 div.loginInput input{
     border: 0px;
     margin-top: 3px;
+    width: 100px;
 }
