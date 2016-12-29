@@ -1,0 +1,59 @@
+div.registerDiv{
+    width: 600px;
+    margin: 0px auto;
+}
+
+table.registerTable{
+    width: 100%;
+    margin-top: 50px;
+    table-layout: fixed;
+}table.registerTable{
+    width: 100%;
+    
+}
+table.registerTable td{
+    padding: 10px 20px;
+    
+}
+td.registerTableLeftTD{
+    text-align: right;
+    padding-right: 25px !important;
+    font-size: 15px;
+}
+td.registerTableRightTD{
+    padding-left: 25px !important;
+    font-size: 15px;
+}
+td.registerTableRightTD input{
+   height: 30px;
+   width: 220px;
+   border:1px solid #bbb;
+}
+td.registerTip{
+    font-weight: bold;
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers */ 
+font-size: 13px;
+} 
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+font-size: 13px;
+} 
+input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+font-size: 13px;
+} 
+input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+font-size: 13px;
+} 
+div.registerSubmitDiv{
+    padding: 20px 0px;
+    text-align: center;
+}
+div.registerSubmitDiv button{
+    background-color: #c40000;
+    width: 180px;
+    height: 35px;
+    color: white;
+    border: 0px;
+    font-size: 14px;
+}
