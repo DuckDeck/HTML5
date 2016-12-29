@@ -1,0 +1,65 @@
+body{
+    color: #454444;
+    font-size: 0.45rem;
+}
+
+div.qus1{
+    padding: 0.5rem 1rem;
+    padding-bottom: 0rem;
+}
+div.qus1 input{
+    width: 0.45rem;
+    height: 0.45rem;
+    vertical-align: middle;
+}
+div.qus1 label{
+    vertical-align: middle;
+}
+div.qusContent{
+    padding-left: 0.4rem;
+}
+div.qusContent div{
+    padding-top: 0.2rem;
+}
+textarea.wanjiaAdvise{
+    width: 6.3rem;
+    height: 1.6rem;
+    resize: none;
+    margin: 0.3rem 0.5rem;
+    border: 1px solid #c4c3c3;
+    padding: 0.2rem;
+    font-size: 0.4rem;
+}
+div.qusContentAge{
+    padding-left: 1.75rem;
+}
+div.qus2{
+     padding: 0.6rem 1.65rem;
+}
+div.qus2 input{
+    width: 0.45rem;
+    height: 0.45rem;
+    vertical-align: middle;
+}
+div.qus2 span{
+    vertical-align: middle;
+   
+}
+div.qus2 div{
+     margin-left: 1.16rem;
+     margin-top: 0.2rem;
+}
+div.qus3{
+    margin: 0.3rem 0rem;
+    padding: 0.3rem 0rem;
+    text-align: center;
+}
+div.qus3 button{
+    border-radius: 0.2rem;
+    background: #ff6634;
+    border: 0px;
+    width: 6rem;
+    height: 1rem;
+    color: white;
+    font-size: 0.5rem;
+}
