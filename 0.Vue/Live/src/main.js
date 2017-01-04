@@ -3,7 +3,7 @@ import VueResourse from 'vue-resource'
 import VueRouter from 'vue-router'
 
 import App from './app.vue';
-import home from './components/home/vue'
+import home from './components/home.vue'
 
 Vue.use(VueResourse)
 Vue.use(VueRouter)
