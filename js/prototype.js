@@ -42,3 +42,27 @@ var b1 = new Bar('b1')
 var b2 = new Bar('b2')
 b1.speak()
 b2.speak()
+
+
+//let's see another style code which can fullfill the same feature
+Fii = {
+    init:function(who){
+        this.me = who
+    },
+    identity:function(){
+        return 'I am '+this.me
+    }
+}
+
+Ber = Object.create(Fii)
+
+Ber.speak = function(){
+    alert('Hello, ' + this.identity() + '.')
+}
+
+var b3 = Object.create(Ber)
+b3.init('b3')
+var b4 = Object.create(Ber)
+b4.init('b4')
+b3.speak()
+b4.speak()
