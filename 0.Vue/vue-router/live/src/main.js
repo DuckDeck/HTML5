@@ -9,7 +9,7 @@ Vue.use(VueResourse)
 Vue.use(VueRouter)
 
 
-const routes = [{path:'/',component:App},{path:'/home',component:home}]
+const routes = [{path:'/',component:home},{path:'/home',component:home}]
 var router = new VueRouter({routes})
 
 const app = new Vue({router,render:h=>h(App)}).$mount('#app')
