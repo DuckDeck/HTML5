@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+        <script src="http://cdn.bootcss.com/vue-router/2.1.1/vue-router.js"></script>
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                var home = {template: '<div><h1>Home</h1><p>aaaa</p></div>'}
+                    
+                var about = {template: '<div><h1>About</h1><p>This is the tutorial about vue-router.</p></div>'}
+                const routes = [{path:'/home',component:home},{path:'/about',component:about}]
+                var router = new VueRouter({routes})
+               
+                const app = new Vue({router}).$mount('#app')
+            
+            })
+        </script>
+    </head>
+    <body>
+          <div id="app" class="list-group">
+              <h1>Hello App!</h1>
+                <router-link to="/home" >Home</router-link>
+                <router-link to="/about" >about</router-link>
+                  <router-view>
+          
+                 </router-view>
+          </div>
+     
+
+    </body>
+</html>

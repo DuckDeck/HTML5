@@ -1,0 +1,2 @@
+  babel-core  babel-loader babel-plugin-transform-runtime  babel-preset-es2015  babel-preset-stage-0  babel-runtime  css-loader  file-loader  style-loader  url-loader
+  vue vue-router vue-hot-reload-api  vue-html-loader  vue-loader  vue-style-loader  webpack  webpack-dev-server  webpack-merge  
