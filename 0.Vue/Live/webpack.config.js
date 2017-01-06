@@ -7,12 +7,19 @@ module.exports = {
     filename: 'build.js'
   },
   //配置自动刷新,如果打开会使浏览器刷新而不是热替换
-  /*devServer: {
-    historyApiFallback: true,
-    hot: false,
-    inline: true,
-    grogress: true
-  },*/
+  devServer: {
+    // historyApiFallback: true,
+    // hot: true,
+    // inline: true,
+    // grogress: true,
+    proxy:{
+       '/activity/*': {  //代理转发，没想到去掉后面的http://a.impingo.me/最后面的/就行了
+                target: 'http://a.impingo.me',  
+                secure: false,
+                changeOrigin: true,
+            }  
+    }
+  },
   module: {
     loaders: [
       //转化ES6语法
