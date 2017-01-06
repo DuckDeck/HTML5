@@ -1,9 +1,6 @@
 <template>
-    <div class="main">
-     <router-view 
-          keep-alive
-	      transition="fade"
-	      transition-mode='out-in'>
+    <div class="main"> home page
+         <router-view>
         </router-view>
     </div>
 </template>

@@ -4,22 +4,13 @@ import VueRouter from 'vue-router'
 
 import App from './app.vue';
 import home from './components/home.vue'
-
+import list from './components/list.vue'
+import live from './components/live.vue'
 Vue.use(VueResourse)
 Vue.use(VueRouter)
 
-var app = Vue.extend(App)
-var router = new VueRouter()
 
-router.map({
-    '/home':{
-        component:home
-    }
-})
+const routes = [{path:'/',component:home},{path:'/list',component:list},{path:'/live',component:live}]
+var router = new VueRouter({routes})
 
-router.redirect({
-    '/':'home'
-})
-
-router.start(app,'#app');
-window.router = router;
+const app = new Vue({router,render:h=>h(App)}).$mount('#app')
