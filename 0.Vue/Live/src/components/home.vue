@@ -1,12 +1,7 @@
 <template>
     <div class="home">
-        <a v-link="{path:'/list'}">
-            <div class="om-list">
-                <div class="om-list-title om-ellipsis">
-                    进入列表
-                </div>
-            </div>
-        </a>
+        <router-link to="/list">to list</router-link>
+        <router-link to="/live">to live</router-link>
     </div>
 </template>
 <script>
