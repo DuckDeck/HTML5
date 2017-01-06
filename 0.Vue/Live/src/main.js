@@ -8,18 +8,8 @@ import home from './components/home.vue'
 Vue.use(VueResourse)
 Vue.use(VueRouter)
 
-var app = Vue.extend(App)
-var router = new VueRouter()
 
-router.map({
-    '/home':{
-        component:home
-    }
-})
+const routes = [{path:'/',component:App},{path:'/home',component:home}]
+var router = new VueRouter({routes})
 
-router.redirect({
-    '/':'home'
-})
-
-router.start(app,'#app');
-window.router = router;
+const app = new Vue({router,render:h=>h(App)}).$mount('#app')

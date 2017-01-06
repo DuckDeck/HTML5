@@ -11,7 +11,8 @@
 </template>
 <script>
     export default{
-        data:function(){
+        name:'home',
+        data(){
             return{}
         }
     }
