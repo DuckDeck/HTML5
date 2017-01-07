@@ -1,6 +1,7 @@
 var path = require('path');
 module.exports = {
   entry: './src/main.js',
+  devtool: 'source-map',//配置生成Source Maps，选择合适的选项,用来调试
   output: {
     path: './build',
     publicPath:'build/',

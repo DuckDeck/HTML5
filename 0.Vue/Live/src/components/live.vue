@@ -9,10 +9,10 @@
                             <img :src="getUserImg(anchor.userID)" class="user" />
 							<img src="../assert/img/play.png" class="play" />
                             <!--静态资源使用相对路径就行-->
-							<p class="add">+1</p>
+							<p class="add" v-show="anchor.showAdd">+1</p>
 						</a>
 						<div class="user-wrapper">
-							<div class="name" v-text="anchor.anchorName">
+							<div class="name" v-text="anchor.anchorName" @click="jumpProfile(anchor.userID)">
 							</div>
 							<div class="num" v-text="anchor.supportCnt">
 							</div>
@@ -34,35 +34,66 @@
 </template>
 <script>
     import axios from 'axios'
+    import {a,urlParams} from '../tool/urlPara'
+    const url = window.location
+    const selfUserID = urlParams(url)['userID']
+    const selfSessionID = urlParams(url)['sessionID']
+    const selfSessionToken = urlParams(url)['sessionToken']
+    const selfPeerID = urlParams(url)['peerID']
     export default{
         data(){
             return{
                 anchorInfo:[],
-                livingInfo:[]
+                livingInfo:[],
+                anchorUserID:'',
+                todayHadVote:false,
+                setIntervalGetAnchorInfo: null,
+                setIntervalGetLiveStatus: null,
+                intervalDuration: 60 * 1000,
             }
         },
         mounted(){
            this.getAnchors()
-           this.getLivinStatus()
+           this.getLiveStatus()
+           this.queryVoteStatus()
+           this.initSetTimeout()
         },
         methods:{
            getAnchors(){
                 axios.get('http://127.0.0.1:8080/activity/getAnchorInfo').then(response=>{
-                    console.log("getAnchors")
                     var res = response.data;
                     if(res.rtn == 0) {
                         this.anchorInfo = res.data;
                     }
                })
            },
-           getLivinStatus(){
+           getLiveStatus(){
                axios.get('http://127.0.0.1:8080/activity/getLiveStatus').then(response=>{
-                    console.log("getLivinStatus")
                     var res = response.data;
                     if(res.rtn == 0) {
                         this.livingInfo = res.data;
                     }
                })
+           },
+           queryVoteStatus(){
+               axios.get('http://127.0.0.1:8080/activity/queryVoteStatus?userID='+selfUserID).then(response=>{
+                   var res = response.data;
+                    if(res.rtn == 0) {
+                        this.todayHadVote = false
+                    }
+                    else if(res.rtn == 1){
+                        this.todayHadVote = true
+                        this.anchorUserID = res.data.anchorUserID
+                    }
+               })
+           },
+           getVoteStatus(anchor){
+               if(anchor.userID == this.anchorUserID){
+                    return true
+                }
+                else{
+                    return false
+                }
            },
            getLivingSatus(anchor){
                //这是一个异步方法，目前还没有找到方法来解决，目前只好用同步方法了
@@ -80,7 +111,7 @@
               for(var l of this.livingInfo){
                 if(l.createUserID == anchor.userID){
                     if(l.state == '3'){
-                        console.log('true')
+                        // console.log('true')
                         isLiving = true
                     }
                  }
@@ -90,8 +121,47 @@
            getUserImg(id){
               return 'http://a.impingo.me/static/activity/singer/resource/' + id + '.jpg';
            },
-           getVoteStatus(anchor){
-               return false
+           initSetTimeout(){
+               var that = this
+               that.setIntervalGetAnchorInfo = setInterval(function(){
+                   that.getAnchors() 
+               },that.intervalDuration)
+               that.setIntervalGetLiveStatus = setInterval(function(){
+                   that.getLiveStatus()
+               },that.intervalDuration)
+           },
+           singlerVote(anchor){
+               var getTargetUserID = anchor.userID
+               if(this.todayHadVote){
+                   console.log('每日仅支持一次！')
+                   return
+               }
+               //需要这么多参数， 我就没办法了
+               axios.get('http://127.0.0.1:8080/activity/singerVote'+
+               '?userID=' + selfUserID + '&targetUserID=' + getTargetUserID +
+                '&sessionID=' + selfSessionID + '&sessionToken=' + selfSessionToken + '&peerID=' + selfPeerID).then(response=>{
+                    var res = response.data;
+                    if(res.rtn == 0) {
+                        anchor.showAdd = true
+                        anchor.supportCnt++
+                        this.anchorUserID = getTargetUserID
+                        this.todayHadVote = true
+                        clearInterval(this.setIntervalGetAnchorInfo)
+                        setTimeout(function() {
+                            that.getAnchors()
+                            that.getLiveStatus()
+                            that.setIntervalGetAnchorInfo = setInterval(function(){
+                                 that.getAnchors() 
+                            },that.intervalDuration)
+                        }, 2000);
+                    }
+                    else if(res.rtn == 2||res.rtn == 3||res.rtn == 1){
+                        console.log(res.msg)
+                    }
+                })
+           },
+           jumpProfile(userID){
+               window.location.href = 'http://api.impingo.me/static/singer/preselection-live.html?userID=' + userID; // 视频地址
            }
         }
     }
@@ -163,21 +233,39 @@
 .radio-wrapper .list li .user-wrapper .name{
     display: inline-block;
 }
+.radio-wrapper .list li .user-wrapper .name:hover{
+    cursor: pointer;
+}
 .radio-wrapper .list li .user-wrapper .num{
     display: inline-block;
     float: right;
     color: #f919b6;
+}
+.radio-wrapper .list li .had-btn {
+  background-color: #ffb9e8;
+  text-align: center;
+  border-radius: 0.2rem;
+  width: 80%;
+  height: 2rem;
+  margin: auto;
+  margin-bottom: 0.6rem;
+  color: white;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 .radio-wrapper .list li .do-btn {
   background-color: #f919b6;
   text-align: center;
   border-radius: 0.2rem;
   width: 80%;
-  height: 1.6rem;
+  height: 2rem;
   margin: auto;
   margin-bottom: 0.6rem;
   color: white;
   font-size: 1rem;
-  line-height: 1.6rem;
+  line-height: 2rem;
+}
+.radio-wrapper .list li .do-btn:hover{
+    cursor: pointer;
 }
 </style>
