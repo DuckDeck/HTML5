@@ -12,8 +12,10 @@
     "axios": "^0.15.3",
     "node-sass": "^4.1.1",
     "sass-loader": "^4.1.1",
+    "scss-loader": "0.0.1",
     "vue": "^2.1.8",
     "vue-infinite-scroll": "^2.0.0",
+    "vue-resource": "^1.0.3",
     "vue-router": "^2.1.1",
     "vuex": "^2.1.1"
   },

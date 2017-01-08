@@ -68,3 +68,20 @@ console.log('b' in getsetObj)
 console.log(getsetObj.hasOwnProperty('a'))
 console.log(getsetObj.hasOwnProperty('_a_')) //also true
 console.log(getsetObj.hasOwnProperty('b'))
+
+
+
+var resultInfo = {
+    code:0,
+    msg:'success',
+    content:null,
+    init:function(code,msg,content){
+        this.code = code
+        this.msg = msg
+        this.content = content
+    }
+};
+
+let result = Object.create(resultInfo)
+result.init(2,'123123',[111])
+console.log(result)

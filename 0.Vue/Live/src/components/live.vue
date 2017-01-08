@@ -60,10 +60,11 @@
         },
         methods:{
            getAnchors(){
+               var that = this
                 axios.get('http://127.0.0.1:8080/activity/getAnchorInfo').then(response=>{
                     var res = response.data;
                     if(res.rtn == 0) {
-                        this.anchorInfo = res.data;
+                        that.anchorInfo = res.data;
                     }
                })
            },

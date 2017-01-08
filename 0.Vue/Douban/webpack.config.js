@@ -8,19 +8,19 @@ module.exports = {
     filename: 'build.js'
   },
   //配置自动刷新,如果打开会使浏览器刷新而不是热替换
- // devServer: {
+ devServer: {
     // historyApiFallback: true,
     // hot: true,
     // inline: true,
     // grogress: true,
-    // proxy:{
-    //    '/activity/*': {  //代理转发，没想到去掉后面的http://a.impingo.me/最后面的/就行了
-    //             target: 'http://a.impingo.me',  
-    //             secure: false,
-    //             changeOrigin: true,
-    //         }  
-    // }
- // },
+    proxy:{
+       '/v2/*': {  //代理转发，没想到去掉后面的http://a.impingo.me/最后面的/就行了
+                target: 'https://api.douban.com',  
+                secure: false,
+                changeOrigin: true,
+            }  
+    }
+ },
   module: {
     loaders: [
       //转化ES6语法
@@ -38,12 +38,16 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         loader:'url-loader?limit=8192'
-      }
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style!css!sass!scss'
+       }
     ]
   },
   vue:{
     loaders:{
-      js:'babel'
+      js:'babel',
     }
   },
   resolve: {
