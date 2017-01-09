@@ -11,7 +11,7 @@
     props: ['show']
   }
 </script>
-
+<!--目前从npm安卓的scss-loader是空的，好坑啊，完全不能用，我只有修改成sass了-->
 <style lang="sass">
   $offset: 126;
   $duration: 1.4s;

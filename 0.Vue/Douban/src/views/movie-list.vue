@@ -8,7 +8,7 @@
             <li v-for="movie in movies">
                 <a class="link">                    
                     <img :src="movie.images.large" class="movieImg" />
-                    <div class="movietitle">
+                    <div class="movieListtitle">
                         {{movie.title}}
                     </div>
                 </a>      
@@ -74,7 +74,7 @@ a.link .movieImg{
    padding-top: 0.2rem;
    height: 4rem;
 }
-div.movietitle{
+div.movieListtitle{
     font-size: 0.1rem;
 }
 </style>

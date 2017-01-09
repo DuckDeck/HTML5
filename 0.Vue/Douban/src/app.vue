@@ -3,7 +3,7 @@
      <header class="doubanHead">
         <div class="doubanHeadDiv">
              <a href="#/index" style="color: #2384E8;">电影</a>
-             <a href="#/book" style="color: #9F7860;">图书</a>
+             <a href="#/swiper" style="color: #9F7860;">图书</a>
         </div>
         <div class="doubanSearchDiv">
             <input class="doubanSearch" type="text" placeholder="请输入作品名称搜索" name="" value="">
@@ -12,6 +12,9 @@
         <router-view></router-view>
     </div>
 </template>
+<script>
+   
+</script>
 <style >
 ul{
     margin: 0;
