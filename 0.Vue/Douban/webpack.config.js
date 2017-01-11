@@ -47,6 +47,10 @@ module.exports = {
         test: /\.css$/,
         loader: 'style!css!sass'
       },
+      {
+        test: /vue-scroller.src.*?js$/,
+        loader: 'babel'
+      }
     ]
   },
   vue:{
@@ -57,6 +61,7 @@ module.exports = {
   resolve: {
         // require时省略的扩展名，如：require('app') 不需要app.js
         extensions: ['', '.js', '.vue'],
+        fallback: [path.join(__dirname, './node_modules')],
         // 别名，可以直接使用别名来代表设定的路径以及其他
         alias: {
             filter: path.join(__dirname, './src/filters'),
