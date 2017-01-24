@@ -4,34 +4,135 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="this.js">       </script>
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+        <!--<script src="this.js">       </script>
         <script src="oop.js"></script>
-        <script src="prototype.js"></script>
+        <script src="prototype.js"></script>-->
         <!--<script src="promise.js">
             
         </script>-->
         <script>
-            //var a 
-            
-            // console.log(a)
-            // var a = 2
-           
 
-//  for(var i = 1;i<=5;i++){
-//      (function(j){
-//          setTimeout(function(i) {
-//              console.log(j)
-//          }, j * 1000);
-//      })(i)
-//  }
-        // for(let i = 0;i++;i <= 5){
-        //     setTimeout(function() {
-        //         console.log(i)
-        //     }, i*1000);
-        // }
+var APPCommon = {
+    iphoneSchema: 'wanjia://',
+    iphoneDownUrl: 'https://itunes.apple.com/cn/app/id1176755755',
+    androidSchema: 'scheme://wanjia/',
+    androidDownUrl: 'http://webrs.xingbo.tv/app/XingboLive-release.apk',
+    openApp: function(){
+        var this_  =  this;
+        //微信
+        if(this_.isWeixin()){
+            $(".weixin-tip").css("height",$(window).height());
+            $(".weixin-tip").show();
+            $('.weixin-tip').on('touchstart', function () {
+                $(".weixin-tip").hide();
+            });
+ 
+        }else{//非微信浏览器
+            if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+                var loadDateTime = new Date();
+                // window.setTimeout(function() {
+                //     var timeOutDateTime = new Date();
+                //     if (timeOutDateTime - loadDateTime < 5000) {
+                //         window.location = this_.iphoneDownUrl;//ios下载地址
+                //     } else {
+                //         window.close();
+                //     }
+                // },2000);
+                window.location = this.iphoneSchema;
+                !window.document.webkitHidden && setTimeout(function () {
+                    setTimeout(function () {
+                        window.location = this_.iphoneDownUrl; //例如http://itunes.apple.com/..
+                    }, 100);
+                 }, 600);
+                
+            }else if (navigator.userAgent.match(/android/i)) {
+                try {
+                    window.location = this_.androidSchema;
+                    setTimeout(function(){
+                        window.location=this_.androidDownUrl; //android下载地址
+ 
+                    },500);
+                } catch(e) {}
+            }
+        }
+    },
+    isWeixin: function(){ //判断是否是微信
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+ 
+};
+
+        $(function(){
+            $('#open').click(function(){
+              APPCommon.openApp()
+              
+           })
+        })
+
+        console.log(new Date('2017-02-20 23:59:59'.replace(/-/g,"/")))
+            
+        console.log(/ada/)
+
         </script>
     </head>
+    <style>
+    .trangle{
+        width: 0;
+        height: 0;
+          /*border-left:50px solid red;
+        border-bottom:50px solid blue;
+        border-top:50px solid black;
+        border-right:50px solid purple;*/
+        border: 50px transparent solid;
+        border-top-color: black;
+    }
+    .test{
+        position: relative;
+        width: 150px;
+        height: 36px;
+        border-radius: 5px;
+        border: black 1px solid;
+        background: rgba(245, 245, 245, 1);
+          margin-left: 20px;
+    }
+    .test:before,.test:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 8px;
+        width: 0;
+        height: 0;
+        border:  transparent 6px solid;
+      
+    }
+    .test:before{
+        left: -11px;
+        border-right-color: rgba(245, 245, 245, 1);
+        z-index: 1
+    }
+    .test:after{
+        left: -12px;
+        border-right-color: rgba(0, 0, 0, 1);
+        z-index: 0
+    }
+    </style>
     <body>
-    
+         <a id="open" ><button type="" >打开APP</button></a> 
+
+         <div class="trangle">
+             
+         </div>
+
+         <div class="test">
+             
+         </div>
+
+
     </body>
 </html>
