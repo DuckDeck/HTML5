@@ -105,6 +105,10 @@ ul.moviesUl li{
 div.movietitle{
     font-size: 0.3rem
 }
+a.link{
+    color: #ddd;
+    text-decoration: none;
+}
 a.link .movieImg{
    width: 2.86rem;
    padding: 0rem 0.2rem;

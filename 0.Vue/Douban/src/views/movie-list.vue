@@ -4,16 +4,19 @@
            <div >
                <span class="movieTitleSpan">{{category}}</span>
            </div>
-         <ul class="moviesUl" v-cloak>
-            <li v-for="movie in movies">
-                <a class="link">                    
-                    <img :src="movie.images.large" class="movieImg" />
-                    <div class="movieListtitle">
-                        {{movie.title}}
-                    </div>
-                </a>      
-            </li>
- 	      </ul>
+
+         <scroll delegate-id="movieScroller"
+            :on-refresh="refresh" on-infinite="loadmore" v-ref:
+            class="moviesUl" v-cloak>
+                <li v-for="movie in movies">
+                    <a class="link">                    
+                        <img :src="movie.images.large" class="movieImg" />
+                        <div class="movieListtitle">
+                            {{movie.title}}
+                        </div>
+                    </a>      
+                </li>
+ 	      </scroll>
        </section>
        <spinner :show="loading" ></spinner>
    </div>
@@ -21,9 +24,10 @@
 <script>
     import movieInfo from '../model/movieInfo'
     import Spinner  from '../components/spinner.vue'
+    import Scroll from 'vue-scroller'
     export default{
         name:'index',
-        components: {Spinner},
+        components: {Spinner,Scroll},
         data(){
             return{
                 category:"",
@@ -32,18 +36,20 @@
             }
         },
         mounted(){
-            var that = this
-            movieInfo.getMovies('in_theaters?start='+that.movies.length).then(function(data){
-                that.movies = data.subjects //使用了Promiss this会丢失
-                that.loading = false
-                that.category = data.title
-            },function(error){
-                console.log(data.msg)
-                that.loading = false
-            })         
+             this.loadmore()      
         },
         methods:{
-           
+           loadmore:function(){
+                var that = this
+                movieInfo.getMovies('in_theaters?start='+that.movies.length).then(function(data){
+                    that.movies = data.subjects //使用了Promiss this会丢失
+                    that.loading = false
+                    that.category = data.title
+                },function(error){
+                    console.log(data.msg)
+                    that.loading = false
+                })  
+           }
         }
     }
 </script>
