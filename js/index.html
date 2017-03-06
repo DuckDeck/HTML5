@@ -75,9 +75,22 @@ var APPCommon = {
            })
         })
 
-        console.log(new Date('2017-02-20 23:59:59'.replace(/-/g,"/")))
-            
-        console.log(/ada/)
+        // check is that the object is null
+        // console.log(new Date('2017-02-20 23:59:59'.replace(/-/g,"/")))
+        
+        // Object.prototype.isEmpty = function(){
+        //    for (var key in this) {
+        //        if(key == 'isEmpty'){
+        //            continue
+        //        }
+        //         return false;
+        //     }
+        //     return true;
+        //  }
+        // var s = {asaa:'aaa'}
+        // console.log(s.isEmpty())
+
+        
 
         </script>
     </head>
@@ -126,7 +139,10 @@ var APPCommon = {
          <a id="open" ><button type="" >打开APP</button></a> 
 
          <div class="trangle">
-             
+             <div class="sss">
+                <span class="qqq"></span>
+
+             </div>
          </div>
 
          <div class="test">
@@ -135,4 +151,31 @@ var APPCommon = {
 
 
     </body>
+    <script>
+    let s = document.getElementsByClassName('trangle')[0]
+    // for(let p = 0; p< s.childNodes.length; p++){
+    //     console.log(s.childNodes[p])
+          
+    // }
+      
+      function sss(ele,name){
+            let result = []
+            function childWithClass(element,className){
+            if(element.nodeType == 1 && element.className == className){
+                result.push(element)
+            }
+            else{
+                for(var i = 0;i<element.childNodes.length;i++){
+                    childWithClass(element.childNodes[i],className)
+                }
+            }
+
+          }
+          childWithClass(ele,name)
+          return result
+      }
+      let zzz = sss(s,'sss')
+      console.log(zzz)
+
+    </script>
 </html>
